@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-const DefaultButtonStyle = styled.button`
+const DefaultButtonStyle = styled('button')`
   transition: all 0.3s linear;
   padding: 0.5rem;
   font-weight: 400;

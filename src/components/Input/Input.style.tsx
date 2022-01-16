@@ -1,24 +1,27 @@
 import styled from '@emotion/styled'
 
-export const StyledInput = styled.input`
+export const DefaultInputStyle = styled('input')`
   padding: 0.25rem;
-  border: 1px solid #d96c75;
+  border: 1px solid #5f5f5f;
   border-radius: 0.25rem;
   resize: none;
+  font-size: 0.75rem;
 
   &:focus {
     outline: none;
   }
 `
 
-export const StyledLabel = styled.label`
-  color: #260101;
-  padding: 0.25rem;
+export const PrimaryInput = styled(DefaultInputStyle)`
+  border-color: #d96c75;
 `
 
-export const FormControl = styled.div`
-  margin: 0.5rem 0;
-  display: grid;
-  align-items: center;
-  text-align: start;
+export const SecondaryInput = styled(DefaultInputStyle)`
+  border-color: #f2ead0;
+`
+
+export const SearchInput = styled(DefaultInputStyle)`
+  border-radius: 25px;
+  border: 2px solid #d96c75;
+  box-shadow: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
 `

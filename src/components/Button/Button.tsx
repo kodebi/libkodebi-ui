@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as btnStyle from './Button.style'
+import * as B from './Button.style'
 
 export type ButtonType = 'primary' | 'secondary' | 'filter'
 
@@ -8,27 +8,31 @@ export interface ButtonProps
   variant: ButtonType
   label: string
   width?: string
+  className?: string
   onClick?: () => void
 }
 
-const checkBtnType = (type: ButtonType) => {
+function checkBtnType(type: ButtonType): Function {
   switch (type) {
     case 'primary':
-      return btnStyle.PrimaryBtn
+      return B.PrimaryBtn
     case 'secondary':
-      return btnStyle.SecondaryBtn
+      return B.SecondaryBtn
     case 'filter':
-      return btnStyle.FilterBtn
+      return B.FilterBtn
     default:
-      return btnStyle.PrimaryBtn
+      return B.PrimaryBtn
   }
 }
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  function (
+export const Button: React.FC<ButtonProps> = React.forwardRef<
+  HTMLButtonElement,
+  ButtonProps
+>(
+  (
     { variant = 'primary', label, width, ...props }: ButtonProps,
     ref
-  ): JSX.Element {
+  ): JSX.Element => {
     const Element = checkBtnType(variant)
     return (
       <Element ref={ref} type='button' style={{ width }} {...props}>

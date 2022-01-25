@@ -4,7 +4,7 @@ import * as t from './Text.style'
 export type TextWeight = 'light' | 'regular' | 'bold'
 
 export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  content: string | number
+  content?: string | number
   weight?: TextWeight
   className?: string
 }

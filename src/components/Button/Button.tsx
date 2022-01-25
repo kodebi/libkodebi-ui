@@ -28,19 +28,14 @@ function checkBtnType(type: ButtonType): Function {
 export const Button: React.FC<ButtonProps> = React.forwardRef<
   HTMLButtonElement,
   ButtonProps
->(
-  (
-    { variant = 'primary', label, width, ...props }: ButtonProps,
-    ref
-  ): JSX.Element => {
-    const Element = checkBtnType(variant)
-    return (
-      <Element ref={ref} type='button' style={{ width }} {...props}>
-        {label}
-      </Element>
-    )
-  }
-)
+>(({ variant = 'primary', label, width, ...props }, ref): JSX.Element => {
+  const Element = checkBtnType(variant)
+  return (
+    <Element ref={ref} type='button' style={{ width }} {...props}>
+      {label}
+    </Element>
+  )
+})
 
 Button.displayName = 'Button'
 Button.defaultProps = {

@@ -1,12 +1,14 @@
 import * as React from 'react';
 import * as t from './Text.style';
 
-export type TextWeight = undefined | 'light' | 'regular' | 'bold';
+export type TextWeight = 'light' | 'regular' | 'bold';
 
 export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	weight?: TextWeight;
-	content?: string | number;
 	className?: string;
+	color?: string;
+	fontSize?: string;
+	children?: React.ReactNode;
 }
 
 const getTextWeight = (type: TextWeight) => {
@@ -25,14 +27,25 @@ const getTextWeight = (type: TextWeight) => {
 export const Text: React.FC<TextProps> = React.forwardRef<
 	HTMLParagraphElement,
 	TextProps
->(({ content, weight, ...props }: TextProps): JSX.Element => {
-	const Element = getTextWeight(weight);
-	return <Element {...props}>{content}</Element>;
-});
+>(
+	(
+		{ weight = 'regular', color, fontSize, children, ...props }: TextProps,
+		ref
+	): JSX.Element => {
+		const Element = getTextWeight(weight);
+		return (
+			<Element ref={ref} style={{ color, fontSize }} {...props}>
+				{children}
+			</Element>
+		);
+	}
+);
 
 Text.displayName = 'Text';
 Text.defaultProps = {
-	content: 'Das ist ein Beispieltext...',
 	weight: 'regular',
 	className: undefined,
+	children: undefined,
+	color: undefined,
+	fontSize: undefined,
 };

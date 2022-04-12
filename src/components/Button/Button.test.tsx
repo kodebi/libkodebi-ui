@@ -1,17 +1,10 @@
-import React from 'react';
 import { Button } from './Button';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('Button', () => {
 	it('renders primary button correctly', () => {
-		render(<Button variant="primary" label="Primary" />);
+		render(<Button label="Primary" />);
 		const btnElement = screen.getByRole('button', { name: /primary/i });
-		expect(btnElement).toBeInTheDocument();
-	});
-
-	it('renders secondary button correctly', () => {
-		render(<Button variant="secondary" label="Secondary" />);
-		const btnElement = screen.getByRole('button', { name: /secondary/i });
 		expect(btnElement).toBeInTheDocument();
 	});
 

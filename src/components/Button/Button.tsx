@@ -5,10 +5,11 @@ export type ButtonType = 'primary' | 'secondary' | 'filter';
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant: ButtonType;
+	variant?: ButtonType;
 	label: string;
 	width?: string;
 	className?: string;
+	type?: 'button' | 'submit';
 	onClick?: () => void;
 }
 

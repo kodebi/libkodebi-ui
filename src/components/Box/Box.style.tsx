@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 
 export const FlexBox = styled('div')`
 	display: flex;
-	padding: 0.5rem;
+	padding: 0.75rem;
 
-	@media (min-width: 700px) {
-		padding: 1rem;
+	@media (max-width: 600px) {
+		padding: 0.25rem;
 	} ;
 `;
 

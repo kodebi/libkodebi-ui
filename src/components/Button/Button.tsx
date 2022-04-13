@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as B from './Button.style';
 
-export type ButtonType = 'primary' | 'secondary' | 'filter';
+export type ButtonType = 'signin' | 'action' | 'filter';
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,27 +9,27 @@ export interface ButtonProps
 	label: string;
 	width?: string;
 	className?: string;
-	type?: 'button' | 'submit';
+	type?: 'button' | 'submit' | 'reset';
 	onClick?: () => void;
 }
 
 function checkBtnType(type: ButtonType) {
 	switch (type) {
-		case 'primary':
-			return B.PrimaryBtn;
-		case 'secondary':
-			return B.SecondaryBtn;
+		case 'signin':
+			return B.SigninBtn;
+		case 'action':
+			return B.ActionBtn;
 		case 'filter':
 			return B.FilterBtn;
 		default:
-			return B.PrimaryBtn;
+			return B.SigninBtn;
 	}
 }
 
 export const Button: React.FC<ButtonProps> = React.forwardRef<
 	HTMLButtonElement,
 	ButtonProps
->(({ variant = 'primary', label, width, ...props }, ref): JSX.Element => {
+>(({ variant = 'signin', label, width, ...props }, ref): JSX.Element => {
 	const Element = checkBtnType(variant);
 	return (
 		<Element ref={ref} type="button" style={{ width }} {...props}>
@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonProps> = React.forwardRef<
 
 Button.displayName = 'Button';
 Button.defaultProps = {
-	variant: 'primary',
+	variant: 'signin',
 	label: undefined,
 	width: undefined,
 	onClick: undefined,

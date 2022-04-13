@@ -1,21 +1,31 @@
 import * as React from 'react';
 import * as I from './Input.style';
 
-export type InputType = 'primary' | 'secondary' | 'search';
+export type InputVariant = 'primary' | 'secondary' | 'search';
+
+export type InputType =
+	| 'text'
+	| 'email'
+	| 'password'
+	| 'url'
+	| 'search'
+	| 'number';
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
-	variant: InputType;
+	variant: InputVariant;
 	name: string;
 	id: string;
+	type: InputType;
 	width?: string;
 	className?: string;
 	placeholder?: string;
 	value?: string;
+	required?: boolean;
 	onChange?: () => void;
 }
 
-const getInputType = (type: InputType) => {
+const getInputType = (type: InputVariant) => {
 	switch (type) {
 		case 'primary':
 			return I.PrimaryInput;
@@ -31,18 +41,23 @@ const getInputType = (type: InputType) => {
 export const Input: React.FC<InputProps> = React.forwardRef<
 	HTMLInputElement,
 	InputProps
->(({ variant = 'primary', width, ...props }: InputProps, ref): JSX.Element => {
-	const Element = getInputType(variant);
-	return (
-		<Element
-			ref={ref}
-			data-testid="input-test"
-			type="text"
-			style={{ width }}
-			{...props}
-		/>
-	);
-});
+>(
+	(
+		{ variant = 'primary', type = 'text', width, ...props }: InputProps,
+		ref
+	): JSX.Element => {
+		const Element = getInputType(variant);
+		return (
+			<Element
+				ref={ref}
+				data-testid="input-test"
+				type={type}
+				style={{ width }}
+				{...props}
+			/>
+		);
+	}
+);
 
 Input.displayName = 'Input';
 Input.defaultProps = {
@@ -50,7 +65,9 @@ Input.defaultProps = {
 	name: 'Name des Inputfeldes',
 	id: 'Id des Inputfeldes',
 	placeholder: 'Hier könnte dein Inhalt stehen',
+	type: 'text',
 	width: undefined,
 	value: undefined,
 	onChange: undefined,
+	required: false,
 };

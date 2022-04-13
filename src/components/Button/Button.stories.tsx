@@ -9,16 +9,16 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	variant: 'primary',
-	label: 'Primary',
+export const Signin = Template.bind({});
+Signin.args = {
+	variant: 'signin',
+	label: 'signin',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-	variant: 'secondary',
-	label: 'Secondary',
+export const Action = Template.bind({});
+Action.args = {
+	variant: 'action',
+	label: 'action',
 };
 
 export const Filter = Template.bind({});

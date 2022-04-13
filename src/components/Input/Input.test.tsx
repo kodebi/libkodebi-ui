@@ -3,19 +3,26 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('Input', () => {
 	it('renders primary input correctly', () => {
-		render(<Input variant="primary" name="primary" id="primary" />);
+		render(<Input type="text" variant="primary" name="primary" id="primary" />);
 		const inputElem = screen.getByTestId('input-test');
 		expect(inputElem).toBeInTheDocument();
 	});
 
-	it('renders secondary input correctly', () => {
-		render(<Input variant="secondary" name="secondary" id="secondary" />);
+	it('renders secondary input with password type correctly', () => {
+		render(
+			<Input
+				type="password"
+				variant="secondary"
+				name="secondary"
+				id="secondary"
+			/>
+		);
 		const inputElem = screen.getByTestId('input-test');
 		expect(inputElem).toBeInTheDocument();
 	});
 
 	it('renders search input correctly', () => {
-		render(<Input variant="search" name="search" id="search" />);
+		render(<Input type="search" variant="search" name="search" id="search" />);
 		const inputElem = screen.getByTestId('input-test');
 		expect(inputElem).toBeInTheDocument();
 	});
@@ -23,6 +30,7 @@ describe('Input', () => {
 	it('renders input with custom placeholder', () => {
 		render(
 			<Input
+				type="text"
 				variant="primary"
 				name="test"
 				id="test"
@@ -36,6 +44,7 @@ describe('Input', () => {
 	it('renders input with width correctly', () => {
 		render(
 			<Input
+				type="text"
 				variant="primary"
 				width="100%"
 				id="wdth"
@@ -50,6 +59,7 @@ describe('Input', () => {
 	it('changes input value when changed', () => {
 		render(
 			<Input
+				type="text"
 				variant="primary"
 				width="100%"
 				id="wdth"

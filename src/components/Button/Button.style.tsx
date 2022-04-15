@@ -8,7 +8,7 @@ const DefaultButtonStyle = styled('button')`
 	border-radius: 0.25rem;
 	border: solid 2px #d96c75;
 	padding: 0.25rem;
-	width: auto;
+	width: 100%;
 
 	@media (min-width: 800px) {
 		padding: 0.5rem;
@@ -16,24 +16,24 @@ const DefaultButtonStyle = styled('button')`
 `;
 
 export const SigninBtn = styled(DefaultButtonStyle)`
-	color: #f2ead0;
+	color: rgb(247, 247, 247);
 	background-color: #d96c75;
 
 	:hover {
-		background-color: #260101;
-		border: solid 2px #260101;
+		background-color: rgb(182, 182, 182);
+		border: solid 2px rgb(182, 182, 182);
 	}
 `;
 
 export const ActionBtn = styled(DefaultButtonStyle)`
-	border: solid 2px #f2ead0;
+	border: solid 2px rgb(247, 247, 247);
 	color: #d96c75;
-	background-color: #f2ead0;
+	background-color: rgb(247, 247, 247);
 
 	:hover {
-		border: solid 2px #260101;
-		color: #f2ead0;
-		background-color: #260101;
+		border: solid 2px rgb(182, 182, 182);
+		color: rgb(247, 247, 247);
+		background-color: rgb(182, 182, 182);
 	}
 `;
 
@@ -43,10 +43,11 @@ export const FilterBtn = styled(DefaultButtonStyle)`
 	color: #d96c75;
 	text-transform: uppercase;
 	align-self: center;
+	width: auto;
 
 	:hover {
 		background-color: #d96c75;
-		color: #f2ead0;
+		color: rgb(247, 247, 247);
 		border: solid 2px #d96c75;
 	}
 `;

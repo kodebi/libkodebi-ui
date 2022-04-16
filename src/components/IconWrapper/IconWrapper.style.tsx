@@ -7,4 +7,13 @@ export const IcoWrap = styled(IconLinkStyle)`
 	justify-content: center;
 	align-items: center;
 	margin: 0 0.25rem;
+	cursor: pointer;
+	text-decoration: none;
+	color: #242121;
+	font-size: 1.5rem;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		color: rgb(182, 182, 182);
+	}
 `;

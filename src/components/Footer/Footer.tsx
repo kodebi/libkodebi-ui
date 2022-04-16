@@ -1,24 +1,18 @@
 import * as React from 'react';
 import { Box } from '../Box';
 import { Text } from '../Text';
-import { Link, LinkProps } from 'react-router-dom';
+import { LinkWrapper, LinkWrapperProps } from '../LinkWrapper';
 import { IconWrapper, IconProps } from '../IconWrapper';
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
-	links?: [];
+	links?: Array<LinkWrapperProps>;
 	icons?: [];
 }
 
-export interface SpecialLinkProps extends LinkProps {
-	key?: number;
-	url: string;
-	text?: string;
-}
-
-export const Footer: React.FC<FooterProps> = React.forwardRef<
-	HTMLDivElement,
-	FooterProps
->(({ links, icons }): JSX.Element => {
+export const Footer: React.FC<FooterProps> = ({
+	links,
+	icons,
+}): JSX.Element => {
 	return (
 		<Box
 			variant="center"
@@ -30,12 +24,12 @@ export const Footer: React.FC<FooterProps> = React.forwardRef<
 			<Box variant="flex-space-between" width="100%" maxWidth="1260px">
 				<Box variant="flex-col-start">
 					<Text>© 2022 Kodebi. All rights reserved</Text>
-					<Box variant="flex-align-start" width="100%">
-						{links?.map((link: SpecialLinkProps) => {
+					<Box variant="flex-align-start" width="100%" padding="0">
+						{links?.map((link: LinkWrapperProps, index) => {
 							return (
-								<Link to={link.url} key={link.key}>
-									{link.text}
-								</Link>
+								<LinkWrapper type="footer" to={link.to} key={index}>
+									{link.children}
+								</LinkWrapper>
 							);
 						})}
 					</Box>
@@ -52,4 +46,4 @@ export const Footer: React.FC<FooterProps> = React.forwardRef<
 			</Box>
 		</Box>
 	);
-});
+};

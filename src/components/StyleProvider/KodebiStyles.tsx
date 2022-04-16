@@ -1,5 +1,4 @@
 import { Global, css } from '@emotion/react';
-import '@fontsource/quicksand';
 import '@fontsource/quicksand/400.css';
 import '@fontsource/quicksand/700.css';
 

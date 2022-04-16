@@ -16,7 +16,7 @@ describe('Card', () => {
 		const cardElem = screen.getByText(/card w borders/i);
 		expect(cardElem).toHaveStyle({
 			borderRadius: '12px',
-			border: '1px solid #d96c75',
+			border: '1px solid rgb(182, 182, 182)',
 		});
 	});
 });

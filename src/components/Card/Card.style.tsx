@@ -13,7 +13,7 @@ export const DefaultCard = styled(FlexCol)`
 `;
 
 export const CardWBorders = styled(DefaultCard)`
-	border: 1px solid #d96c75;
+	border: 1px solid rgb(182, 182, 182);
 	border-radius: 12px;
 	box-shadow: 3px 12px 20px rgba(97, 100, 91, 0.2);
 `;

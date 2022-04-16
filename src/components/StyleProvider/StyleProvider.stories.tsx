@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StyleProvider } from './StyleProvider';
+import { Box } from '../Box';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Text } from '../Text/';
@@ -19,8 +20,10 @@ export const ProviderWithChildren = Template.bind({});
 ProviderWithChildren.args = {
 	children: (
 		<Card withBorders>
-			<Text>This is a card</Text>
-			<Button label="Test" />
+			<Box variant="flex-col">
+				<Text>This is a card</Text>
+				<Button label="Test" />
+			</Box>
 		</Card>
 	),
 };

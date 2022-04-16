@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as t from './Text.style';
 
-export type TextWeight = 'light' | 'regular' | 'bold';
+export type TextWeight = 'regular' | 'bold';
 
 export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	weight?: TextWeight;
@@ -13,8 +13,6 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const getTextWeight = (type: TextWeight) => {
 	switch (type) {
-		case 'light':
-			return t.LightText;
 		case 'regular':
 			return t.RegularText;
 		case 'bold':

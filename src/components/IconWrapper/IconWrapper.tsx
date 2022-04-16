@@ -6,15 +6,23 @@ export interface IconProps
 	url?: string;
 	key?: number;
 	icon?: React.ReactNode;
+	fontSize?: string;
 }
 
 export const IconWrapper: React.FC<IconProps> = React.forwardRef<
 	HTMLAnchorElement,
 	IconProps
->(({ href, key, icon, ...props }, ref) => {
+>(({ href, key, icon, fontSize, ...props }, ref) => {
 	const Element = IcoWrap;
 	return (
-		<Element ref={ref} key={key} href={href} data-testid="icon-test" {...props}>
+		<Element
+			ref={ref}
+			key={key}
+			href={href}
+			style={{ fontSize }}
+			data-testid="icon-test"
+			{...props}
+		>
 			{icon}
 		</Element>
 	);

@@ -3,11 +3,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 const options = [
 	{
-		id: 1,
+		key: 1,
 		title: 'test1',
 	},
 	{
-		id: 2,
+		key: 2,
 		title: 'test2',
 	},
 ];

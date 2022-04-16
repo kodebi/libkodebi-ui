@@ -16,11 +16,11 @@ export type DropdownType = 'default' | 'filter';
 
 export interface SelectProps
 	extends React.SelectHTMLAttributes<HTMLSelectElement> {
-	variant: DropdownType;
+	variant?: DropdownType;
 	name?: string;
 	id?: string;
 	value?: string;
-	options?: {}[];
+	options?: Array<OptionProps>;
 	width?: string;
 	className?: string;
 	children?: React.ReactNode;
@@ -40,7 +40,15 @@ export const Select: React.FC<SelectProps> = React.forwardRef<
 	SelectProps
 >(
 	(
-		{ variant, name, id, value, width, options, ...props }: SelectProps,
+		{
+			variant = 'default',
+			name,
+			id,
+			value,
+			width,
+			options,
+			...props
+		}: SelectProps,
 		ref
 	): JSX.Element => {
 		const Element = getDropdownType(variant);

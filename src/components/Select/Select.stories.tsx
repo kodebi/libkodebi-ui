@@ -14,6 +14,7 @@ const Template: ComponentStory<typeof Select> = (args) => (
 export const Dropdown = Template.bind({});
 Dropdown.args = {
 	name: 'Dropdown',
+	variant: 'default',
 	width: '50%',
 	options: [
 		{ id: 1, value: 'Test' },
@@ -24,6 +25,7 @@ Dropdown.args = {
 export const Filter = Template.bind({});
 Filter.args = {
 	name: 'Filter',
+	variant: 'filter',
 	options: [
 		{ id: 1, value: 'Ketchup' },
 		{ id: 2, value: 'Pilze' },

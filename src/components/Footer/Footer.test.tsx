@@ -1,5 +1,5 @@
 import { Footer } from './Footer';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const mockLinks = [
@@ -14,11 +14,14 @@ describe('Footer', () => {
 		expect(footElem).toBeInTheDocument();
 	});
 
-	it('renders Footer with links', () => {
+	it('renders Footer with links', async () => {
 		render(
 			<Router>
 				<Footer links={mockLinks} />
 			</Router>
 		);
+		const footElem = screen.getByText(/kodebi/i);
+		const linkElem = screen.getByText(/home/i);
+		waitFor(() => expect(footElem).toContainElement(linkElem));
 	});
 });

@@ -8,7 +8,7 @@ const DefaultButtonStyle = styled('button')`
 	border-radius: 0.25rem;
 	border: solid 2px #d96c75;
 	padding: 0.25rem;
-	width: 100%;
+	width: auto;
 
 	@media (min-width: 800px) {
 		padding: 0.5rem;

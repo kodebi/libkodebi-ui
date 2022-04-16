@@ -19,7 +19,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 	CardProps
 >(
 	(
-		{ withBorders = false, center, children, width, height, ...props },
+		{ withBorders = false, center = false, children, width, height, ...props },
 		ref
 	): JSX.Element => {
 		const Element = activateBorder(withBorders);

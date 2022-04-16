@@ -5,6 +5,7 @@ export const DefaultCard = styled(FlexCol)`
 	width: auto;
 	height: auto;
 	margin: 0.75rem;
+	padding: 0.25rem;
 
 	@media (max-width: 600px) {
 		margin: 0.25rem;

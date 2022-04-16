@@ -42,11 +42,6 @@ const GlobalStyles = css`
 		color: var(--fnt-clr);
 		font-size: var(--fnt-sz);
 		line-height: 1.5;
-		text-align: center;
-	}
-	main {
-		display: grid;
-		place-items: center;
 	}
 	ul {
 		list-style-type: none;
@@ -55,26 +50,6 @@ const GlobalStyles = css`
 		text-decoration: none;
 		font-family: var(---fnt-fmly);
 		font-size: var(--fnt-sz);
-	}
-	h1,
-	h2,
-	h3,
-	h4 {
-		letter-spacing: var(--lttr-spcng);
-		line-height: 1.25;
-		margin-bottom: 1rem;
-	}
-	h1 {
-		font-size: 1.5rem;
-	}
-	h2 {
-		font-size: 1.25rem;
-	}
-	h3 {
-		font-size: 1rem;
-	}
-	h4 {
-		font-size: var(---fnt-sz);
 	}
 	p {
 		font-size: var(--fnt-sz);
@@ -89,24 +64,6 @@ const GlobalStyles = css`
 	}
 	@media (min-width: 800px) {
 		a {
-			font-size: 1rem;
-		}
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin-bottom: 2rem;
-		}
-		h1 {
-			font-size: 3rem;
-		}
-		h2 {
-			font-size: 2rem;
-		}
-		h3 {
-			font-size: 1.5rem;
-		}
-		h4 {
 			font-size: 1rem;
 		}
 		p {

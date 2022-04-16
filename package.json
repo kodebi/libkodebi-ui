@@ -21,6 +21,9 @@
 		"react-router-dom": "^6.2.1",
 		"webpack": ">=5"
 	},
+	"dependencies": {
+		"@fontsource/quicksand": "^4.5.6"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.16.7",
 		"@emotion/react": "^11.7.1",
@@ -55,8 +58,5 @@
 	"files": [
 		"lib"
 	],
-	"types": "lib/index.d.ts",
-	"dependencies": {
-		"@fontsource/quicksand": "^4.5.6"
-	}
+	"types": "lib/index.d.ts"
 }

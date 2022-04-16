@@ -19,3 +19,5 @@ export const IconWrapper: React.FC<IconProps> = React.forwardRef<
 		</Element>
 	);
 });
+
+IconWrapper.displayName = 'Icon';

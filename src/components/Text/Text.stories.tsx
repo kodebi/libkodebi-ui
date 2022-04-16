@@ -13,7 +13,7 @@ export const LightText = Template.bind({});
 LightText.args = {
 	name: 'Paragraph',
 	weight: 'light',
-	content: 'Hier könnte Dein Inhalt stehen...',
+	children: 'Hier könnte Dein Inhalt stehen...',
 };
 
 export const RegularText = Template.bind({});
@@ -27,5 +27,5 @@ export const BoldText = Template.bind({});
 BoldText.args = {
 	name: 'Paragraph',
 	weight: 'bold',
-	content: 'Hier könnte Dein Inhalt stehen...',
+	children: 'Hier könnte Dein Inhalt stehen...',
 };

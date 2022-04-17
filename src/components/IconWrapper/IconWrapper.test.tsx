@@ -10,6 +10,6 @@ describe('IconWrapper', () => {
 			</IconWrapper>
 		);
 		const iconElem = screen.getByTestId(/icon-test/i);
-		expect(iconElem).toHaveStyle({ margin: '0 0.25rem' });
+		expect(iconElem).toHaveStyle({ margin: '0.25rem' });
 	});
 });

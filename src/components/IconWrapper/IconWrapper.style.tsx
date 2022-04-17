@@ -6,7 +6,7 @@ const IconLinkStyle = FlexBox.withComponent('a');
 export const IcoWrap = styled(IconLinkStyle)`
 	justify-content: center;
 	align-items: center;
-	margin: 0 0.25rem;
+	margin: 0.25rem;
 	cursor: pointer;
 	text-decoration: none;
 	color: #242121;
@@ -14,6 +14,6 @@ export const IcoWrap = styled(IconLinkStyle)`
 	transition: all 0.2s ease-in-out;
 
 	&:hover {
-		color: rgb(182, 182, 182);
+		color: rgb(247, 247, 247);
 	}
 `;

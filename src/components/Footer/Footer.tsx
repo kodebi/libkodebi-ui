@@ -6,7 +6,7 @@ import { IconWrapper, IconProps } from '../IconWrapper';
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	links?: Array<LinkWrapperProps>;
-	icons?: [];
+	icons?: Array<IconProps>;
 }
 
 export const Footer: React.FC<FooterProps> = ({
@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
 			position="relative"
 			backgroundColor="#D9C6BA"
 		>
-			<Box variant="flex-space-between" width="100%" maxWidth="1260px">
+			<Box variant="flex-space-between" width="100%" maxWidth="1140px">
 				<Box variant="flex-col-start">
 					<Text>© 2022 Kodebi. All rights reserved</Text>
 					<Box variant="flex-align-start" width="100%" padding="0">
@@ -34,11 +34,11 @@ export const Footer: React.FC<FooterProps> = ({
 						})}
 					</Box>
 				</Box>
-				<Box variant="flex-align-end">
-					{icons?.map((link: IconProps) => {
+				<Box variant="flex-align-start" padding="0" margin="14px 0">
+					{icons?.map((link: IconProps, index) => {
 						return (
-							<IconWrapper url={link.url} key={link.key}>
-								{link.icon}
+							<IconWrapper href={link.href} key={index}>
+								{link.children}
 							</IconWrapper>
 						);
 					})}

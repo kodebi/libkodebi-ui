@@ -4,6 +4,7 @@ export * from './components/Card';
 export * from './components/Footer';
 export * from './components/IconWrapper';
 export * from './components/Input';
+export * from './components/InputWrapper';
 export * from './components/LinkWrapper';
 export * from './components/Select';
 export * from './components/StyleProvider';

@@ -1,3 +1,4 @@
+export * from './components/AppShell';
 export * from './components/Box';
 export * from './components/Button';
 export * from './components/Card';
@@ -7,6 +8,5 @@ export * from './components/Input';
 export * from './components/InputWrapper';
 export * from './components/LinkWrapper';
 export * from './components/Select';
-export * from './components/StyleProvider';
 export * from './components/Text';
 export * from './components/Textarea';

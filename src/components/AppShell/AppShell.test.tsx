@@ -1,13 +1,13 @@
-import { StyleProvider } from './StyleProvider';
+import { AppShell } from './AppShell';
 import { Button } from '../Button';
 import { render } from '@testing-library/react';
 
 describe('StyleProvider', () => {
 	it('renders with a Button component', () => {
 		const styProv = render(
-			<StyleProvider>
+			<AppShell>
 				<Button label="test" />
-			</StyleProvider>
+			</AppShell>
 		);
 		const { baseElement } = styProv;
 		expect(baseElement).toBeInTheDocument();

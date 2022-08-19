@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { KodebiStyles } from './KodebiStyles';
 
-export interface StyleProviderProps {
+export interface AppShellProps {
 	children: React.ReactNode;
 }
 
-export const StyleProvider: React.FC<StyleProviderProps> = ({
+export const AppShell: React.FC<AppShellProps> = ({
 	children,
-}: StyleProviderProps): React.ReactElement => {
+}: AppShellProps): React.ReactElement => {
 	return (
 		<>
 			<KodebiStyles />
@@ -15,3 +15,5 @@ export const StyleProvider: React.FC<StyleProviderProps> = ({
 		</>
 	);
 };
+
+AppShell.displayName = 'AppShell';

@@ -1,19 +1,19 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StyleProvider } from './StyleProvider';
+import { AppShell } from './AppShell';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Card } from '../Card';
-import { Text } from '../Text/';
+import { Text } from '../Text';
 
 export default {
-	title: 'libkodebi-ui/StyleProvider',
-	component: StyleProvider,
+	title: 'libkodebi-ui/AppShell',
+	component: AppShell,
 	subcomponents: { Button, Text, Card },
-} as ComponentMeta<typeof StyleProvider>;
+} as ComponentMeta<typeof AppShell>;
 
-const Template: ComponentStory<typeof StyleProvider> = (args) => (
-	<StyleProvider {...args} />
+const Template: ComponentStory<typeof AppShell> = (args) => (
+	<AppShell {...args} />
 );
 
 export const ProviderWithChildren = Template.bind({});

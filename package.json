@@ -4,7 +4,7 @@
 	"description": "The library for reusable UI components in Kodebi apps",
 	"repository": "https://github.com/kodebi/libkodebi-ui.git",
 	"author": "Chris Schimetschka <chris.schimetschka@gmail.com>",
-	"license": "GPL-3.0",
+	"license": "MIT",
 	"private": false,
 	"scripts": {
 		"build": "webpack --mode production",
@@ -14,7 +14,6 @@
 		"test:watch": "jest --watch"
 	},
 	"dependencies": {
-		"@fontsource/quicksand": "^4.5.6",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2"
 	},

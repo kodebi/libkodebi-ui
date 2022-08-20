@@ -39,3 +39,5 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 		);
 	}
 );
+
+Card.displayName = 'Card';

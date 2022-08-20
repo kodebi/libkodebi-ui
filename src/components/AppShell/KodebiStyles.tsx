@@ -1,6 +1,4 @@
 import { Global, css } from '@emotion/react';
-import '@fontsource/quicksand/400.css';
-import '@fontsource/quicksand/700.css';
 
 const GlobalStyles = css`
 	:root {
@@ -10,7 +8,6 @@ const GlobalStyles = css`
 		--bckgrnd-clr-2: rgb(182, 182, 182);
 		--brnd-clr: #d96c75;
 		--sm-clr: #d9c6ba;
-		--fnt-fmly: 'Quicksand', sans-serif;
 		--mn-shdw: 0 1px 5px rgba(0, 0, 0, 0.75);
 		--bx-shdw: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
 		--frm-shdw: 0px 4px 18px 8px rgba(0, 0, 0, 0.3);
@@ -36,7 +33,6 @@ const GlobalStyles = css`
 		min-height: 100vh;
 	}
 	body {
-		font-family: var(--fnt-fmly);
 		background-color: var(--bckgrnd-clr);
 		color: var(--fnt-clr);
 		font-size: var(--fnt-sz);
@@ -47,7 +43,6 @@ const GlobalStyles = css`
 	}
 	a {
 		text-decoration: none;
-		font-family: var(---fnt-fmly);
 		font-size: var(--fnt-sz);
 	}
 	p {
@@ -55,7 +50,6 @@ const GlobalStyles = css`
 		margin-bottom: 0.5rem;
 	}
 	button {
-		font-family: var(--fnt-fmly);
 		font-size: var(---fnt-sz);
 		&:focus {
 			outline: none;

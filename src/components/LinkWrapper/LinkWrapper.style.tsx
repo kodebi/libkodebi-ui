@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import '@fontsource/quicksand/400.css';
 
 export const WrappedLink = styled(NavLink)`
 	display: inline-block;
@@ -10,7 +9,6 @@ export const WrappedLink = styled(NavLink)`
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 0.875rem;
-	font-family: 'Quicksand', 'sans-serif';
 `;
 
 export const MenuLink = styled(WrappedLink)`

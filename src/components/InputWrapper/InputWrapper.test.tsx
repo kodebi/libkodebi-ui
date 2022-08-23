@@ -2,7 +2,7 @@ import { InputWrapper } from './InputWrapper';
 import { render, screen } from '@testing-library/react';
 
 describe('InputWrapper', () => {
-	it('render InputWrapper correctly', () => {
+	it('renders InputWrapper correctly', () => {
 		render(
 			<InputWrapper
 				position="left"

@@ -33,4 +33,5 @@ AboveLabelInput.args = {
 	position: 'above',
 	textarea: false,
 	placeholder: 'Hier könnte Dein Inhalt stehen...',
+	padding: '0.25rem',
 };

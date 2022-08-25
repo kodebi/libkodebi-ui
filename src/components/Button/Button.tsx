@@ -5,9 +5,10 @@ export type ButtonType = 'signin' | 'action' | 'filter';
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant?: ButtonType;
 	label: string;
+	variant?: ButtonType;
 	width?: string;
+	margin?: string;
 	className?: string;
 	type?: 'button' | 'submit' | 'reset';
 	onClick?: () => void;
@@ -29,19 +30,32 @@ function checkBtnType(type: ButtonType) {
 export const Button: React.FC<ButtonProps> = React.forwardRef<
 	HTMLButtonElement,
 	ButtonProps
->(({ variant = 'signin', label, width, ...props }, ref): JSX.Element => {
-	const Element = checkBtnType(variant);
-	return (
-		<Element ref={ref} type="button" style={{ width }} {...props}>
-			{label}
-		</Element>
-	);
-});
+>(
+	(
+		{
+			variant = 'signin',
+			type = 'button',
+			label,
+			width,
+			margin,
+			children,
+			...props
+		},
+		ref
+	): JSX.Element => {
+		const Element = checkBtnType(variant);
+		return (
+			<Element ref={ref} style={{ width, margin }} {...props}>
+				{label}
+			</Element>
+		);
+	}
+);
 
 Button.displayName = 'Button';
 Button.defaultProps = {
 	variant: 'signin',
-	label: undefined,
 	width: undefined,
+	margin: undefined,
 	onClick: undefined,
 };

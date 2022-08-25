@@ -15,6 +15,7 @@ export interface InputWrapperProps
 	type: InputType;
 	placeholder?: string;
 	textarea?: boolean;
+	margin?: string;
 	marginRight?: string;
 	padding?: string;
 }

@@ -18,6 +18,7 @@ export interface InputProps
 	id: string;
 	type: InputType;
 	width?: string;
+	margin?: string;
 	className?: string;
 	placeholder?: string;
 	value?: string;
@@ -43,7 +44,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 	InputProps
 >(
 	(
-		{ variant = 'primary', type = 'text', width, ...props }: InputProps,
+		{ variant = 'primary', type = 'text', width, margin, ...props }: InputProps,
 		ref
 	): JSX.Element => {
 		const Element = getInputType(variant);
@@ -67,6 +68,7 @@ Input.defaultProps = {
 	placeholder: 'Hier könnte dein Inhalt stehen',
 	type: 'text',
 	width: undefined,
+	margin: undefined,
 	value: undefined,
 	onChange: undefined,
 	required: false,

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as bx from './Box.style';
 
-export type BoxType =
+export type BoxVariant =
 	| 'default'
 	| 'center'
 	| 'flex-col'
@@ -11,7 +11,7 @@ export type BoxType =
 	| 'flex-align-end';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
-	variant?: BoxType;
+	variant?: BoxVariant;
 	children?: React.ReactNode;
 	width?: string;
 	height?: string;
@@ -23,7 +23,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 	maxWidth?: string;
 }
 
-const getDisplayType = (type: BoxType) => {
+const getDisplayType = (type: BoxVariant) => {
 	switch (type) {
 		case 'default':
 			return bx.FlexBox;

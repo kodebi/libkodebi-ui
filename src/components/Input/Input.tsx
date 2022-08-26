@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as I from './Input.style';
 
 export type InputVariant = 'primary' | 'secondary' | 'search';
-
 export type InputType =
 	| 'text'
 	| 'email'

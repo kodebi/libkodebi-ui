@@ -10,6 +10,9 @@
   <p align="center">
     The 0.0.1 version of the UI components for the Kodebi Web App and Website.
   </p>
+
+<!-- BADGES -->
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -53,16 +56,14 @@ This library was created to cater the design requirements of Kodebi web applicat
 
 ### Built With
 
-<details>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://emotion.sh/">Emotion</a></li>
-    <li><a href="https://storybook.js.org/">Storybook</a></li>
-    <li><a href="https://rollupjs.org/">Rollup</a></li>
-    <li><a href="https://testing-library.com/react">React Testing Library</a></li>
-  </ul>
-</details>
+<ul>
+  <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+  <li><a href="https://reactjs.org/">React.js</a></li>
+  <li><a href="https://emotion.sh/">Emotion</a></li>
+  <li><a href="https://storybook.js.org/">Storybook</a></li>
+  <li><a href="https://rollupjs.org/">Rollup</a></li>
+  <li><a href="https://testing-library.com/react">React Testing Library</a></li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +76,7 @@ This library was created to cater the design requirements of Kodebi web applicat
 Install the package via npm
 
 ```sh
-    npm i @kodebi/libkodebi-ui
+  npm i @kodebi/libkodebi-ui
 ```
 
 ### Run Locally
@@ -83,25 +84,25 @@ Install the package via npm
 Clone the project
 
 ```sh
-    git clone https://github.com/kodebi/libkodebi-ui.git
+  git clone https://github.com/kodebi/libkodebi-ui.git
 ```
 
 Go to the project directory
 
 ```sh
-    cd path/to/where_you_cloned_the_repo
+  cd path/to/where_you_cloned_the_repo
 ```
 
 Install all the dependencies
 
 ```sh
-    npm install
+  npm install
 ```
 
 Start Storybook and start developing
 
 ```sh
-    npm run storybook
+  npm run storybook
 ```
 
 ### Run Tests
@@ -109,7 +110,7 @@ Start Storybook and start developing
 To run tests with the library, run the following command:
 
 ```sh
-    npm run test
+  npm run test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,7 +150,7 @@ Components from the library come with a default styling, but are also customizab
 | backgroundColor | `string`     | yes       | give your Box a proper color              |
 | maxWidth        | `string`     | yes       | set the maximum width of the div          |
 
-<p><strong>BoxVariant</strong></p>
+##### BoxVariant
 
 | Prop               | Pass as  |
 | ------------------ | -------- |
@@ -173,7 +174,7 @@ Components from the library come with a default styling, but are also customizab
 | className | `string`      | yes       | add custom styling via classes                         |
 | onClick   | `function`    | yes       | pass a function if the Button should perform an action |
 
-<p><strong>ButtonStyle</strong></p>
+##### ButtonStyle
 
 | Prop             | Pass as  |
 | ---------------- | -------- |
@@ -181,7 +182,7 @@ Components from the library come with a default styling, but are also customizab
 | action           | `string` |
 | filter           | `string` |
 
-<p><strong>ButtonType</strong></p>
+##### ButtonType
 
 | Prop             | Pass as  |
 | ---------------- | -------- |
@@ -205,7 +206,7 @@ Components from the library come with a default styling, but are also customizab
 | required    | `boolean`      | yes       | defines if the Input is mandatory to be filled out by the user |
 | onChange    | `function`     | yes       | pass a function if the Input should listen to changes          |
 
-<p><strong>InputVariant</strong></p>
+##### InputVariant
 
 | Prop              | Pass as  |
 | ----------------- | -------- |
@@ -213,16 +214,16 @@ Components from the library come with a default styling, but are also customizab
 | secondary         | `string` |
 | search            | `string` |
 
-<p><strong>InputType</strong></p>
+##### InputType
 
-| Prop     | Pass as  |
-| -------- | -------- |
-| text     | `string` |
-| email    | `string` |
-| password | `string` |
-| url      | `string` |
-| search   | `string` |
-| number   | `string` |
+| Prop           | Pass as  |
+| -------------- | -------- |
+| text (default) | `string` |
+| email          | `string` |
+| password       | `string` |
+| url            | `string` |
+| search         | `string` |
+| number         | `string` |
 
 #### TBC
 

@@ -137,18 +137,18 @@ Components from the library come with a default styling, but are also customizab
 
 #### Box
 
-| Prop            | Type         | Optional? | Description                               |
-| --------------- | ------------ | --------- | ----------------------------------------- |
-| variant         | `BoxVariant` | no        | defines the flex layout of the div        |
-| children        | `ReactNode`  | no        | pass children objects to the div          |
-| width           | `string`     | yes       | customize the width of the Box            |
-| height          | `string`     | yes       | customize the height of the Box           |
-| margin          | `string`     | yes       | set a custom margin for the Box           |
-| className       | `string`     | yes       | add custom styling via classes to the div |
-| padding         | `string`     | yes       | set a custom padding to the div           |
-| position        | `string`     | yes       | accepts `fixed`, `absolute`, `relative`   |
-| backgroundColor | `string`     | yes       | give your Box a proper color              |
-| maxWidth        | `string`     | yes       | set the maximum width of the div          |
+| Prop            | Type         | Optional? | Description                                |
+| --------------- | ------------ | --------- | ------------------------------------------ |
+| variant         | `BoxVariant` | no        | defines the flex layout of the div         |
+| children        | `ReactNode`  | no        | passes children objects to the div         |
+| width           | `string`     | yes       | customizes the width of the Box            |
+| height          | `string`     | yes       | customizes the height of the Box           |
+| margin          | `string`     | yes       | sets a custom margin for the Box           |
+| className       | `string`     | yes       | adds custom styling via classes to the div |
+| padding         | `string`     | yes       | sets a custom padding to the div           |
+| position        | `string`     | yes       | accepts `fixed`, `absolute`, `relative`    |
+| backgroundColor | `string`     | yes       | gives your Box a proper color              |
+| maxWidth        | `string`     | yes       | sets the maximum width of the div          |
 
 ##### BoxVariant
 
@@ -164,15 +164,15 @@ Components from the library come with a default styling, but are also customizab
 
 #### Button
 
-| Prop      | Type          | Optional? | Description                                            |
-| --------- | ------------- | --------- | ------------------------------------------------------ |
-| label     | `string`      | no        | gives the Button a label tag                           |
-| variant   | `ButtonStyle` | yes       | defines the style of the Button                        |
-| type      | `ButtonType`  | yes       | sets the button type                                   |
-| width     | `string`      | yes       | customize the width of the Button                      |
-| margin    | `string`      | yes       | set a custom margin for the Button                     |
-| className | `string`      | yes       | add custom styling via classes                         |
-| onClick   | `function`    | yes       | pass a function if the Button should perform an action |
+| Prop      | Type          | Optional? | Description                                              |
+| --------- | ------------- | --------- | -------------------------------------------------------- |
+| label     | `string`      | no        | gives the Button a label tag                             |
+| variant   | `ButtonStyle` | yes       | defines the style of the Button                          |
+| type      | `ButtonType`  | yes       | sets the button type                                     |
+| width     | `string`      | yes       | customizes the width of the Button                       |
+| margin    | `string`      | yes       | sets a custom margin for the Button                      |
+| className | `string`      | yes       | adds custom styling via classes                          |
+| onClick   | `function`    | yes       | passes a function if the Button should perform an action |
 
 ##### ButtonStyle
 
@@ -190,21 +190,31 @@ Components from the library come with a default styling, but are also customizab
 | submit           | `string` |
 | reset            | `string` |
 
+#### Card
+
+| Prop        | Type        | Optional? | Description                                   |
+| ----------- | ----------- | --------- | --------------------------------------------- |
+| withBorders | `boolean`   | yes       | sets a border for the Card component          |
+| center      | `boolean`   | yes       | centers content within the Card               |
+| width       | `string`    | yes       | customizes the width of the Card              |
+| height      | `string`    | yes       | sets a custom height for the Card             |
+| children    | `ReactNode` | yes       | passes children objects to the Card component |
+
 #### Input
 
 | Prop        | Type           | Optional? | Description                                                    |
 | ----------- | -------------- | --------- | -------------------------------------------------------------- |
 | variant     | `InputVariant` | no        | defines the style of the Input                                 |
-| name        | `string`       | no        | give the Input a dedicated name tag                            |
-| id          | `string`       | no        | set an unique id for the Input                                 |
+| name        | `string`       | no        | gives the Input a dedicated name tag                           |
+| id          | `string`       | no        | sets an unique id for the Input                                |
 | type        | `InputType`    | no        | sets the Input type                                            |
-| width       | `string`       | yes       | customize the width of the Button                              |
-| margin      | `string`       | yes       | set a custom margin for the Button                             |
-| className   | `string`       | yes       | add custom styling via classes                                 |
-| placeholder | `string`       | yes       | set a placeholder to display a CTA within the input field      |
+| width       | `string`       | yes       | customizes the width of the Input                              |
+| margin      | `string`       | yes       | sets a custom margin for the Input                             |
+| className   | `string`       | yes       | adds custom styling via classes                                |
+| placeholder | `string`       | yes       | sets a placeholder to display a CTA within the input field     |
 | value       | `string`       | yes       | used to react to user inputs                                   |
 | required    | `boolean`      | yes       | defines if the Input is mandatory to be filled out by the user |
-| onChange    | `function`     | yes       | pass a function if the Input should listen to changes          |
+| onChange    | `function`     | yes       | passes a function if the Input should listen to changes        |
 
 ##### InputVariant
 
@@ -224,6 +234,80 @@ Components from the library come with a default styling, but are also customizab
 | url            | `string` |
 | search         | `string` |
 | number         | `string` |
+
+#### Select
+
+| Prop        | Type                 | Optional? | Description                                                 |
+| ----------- | -------------------- | --------- | ----------------------------------------------------------- |
+| options     | `Array` of `Options` | yes       | pass an array of options to choose from                     |
+| variant     | `DropdownType`       | yes       | defines the style of the Dropdown menu                      |
+| name        | `string`             | yes       | give the Dropdown a dedicated name tag                      |
+| id          | `string`             | yes       | set an unique id for the Dropdown                           |
+| width       | `string`             | yes       | customizes the width of the Select component                |
+| margin      | `string`             | yes       | sets a custom margin for the Select component               |
+| padding     | `string`             | yes       | sets a padding for the Dropdown                             |
+| className   | `string`             | yes       | adds custom styling via classes                             |
+| placeholder | `string`             | yes       | sets a placeholder to display a CTA within the select field |
+| value       | `string`             | yes       | used to react to user inputs                                |
+| onChange    | `function`           | yes       | passes a function if the Dropdown should listen to changes  |
+
+##### Options
+
+| Prop      | Type                 | Optional? | Description                                                |
+| --------- | -------------------- | --------- | ---------------------------------------------------------- |
+| key       | `string`             | yes       | passes the index of the array as unique key                |
+| value     | `string` or `number` | yes       | sets a value for the option component                      |
+| title     | `string`             | yes       | defines a title for the option                             |
+| name      | `string`             | yes       | defines a name for the option                              |
+| width     | `string`             | yes       | sets a custom width for the option                         |
+| className | `string`             | yes       | adds custom styling via classes                            |
+| onClick   | `function`           | yes       | passes a function which propagates to the Select component |
+
+##### DropdownType
+
+| Prop    | Pass as  |
+| ------- | -------- |
+| default | `string` |
+| filter  | `string` |
+
+#### Text
+
+| Prop      | Type         | Optional? | Description                              |
+| --------- | ------------ | --------- | ---------------------------------------- |
+| weight    | `TextWeight` | yes       | defines the weight of the Text           |
+| color     | `string`     | yes       | sets the color of the Text               |
+| padding   | `string`     | yes       | sets a custom padding for the Text       |
+| margin    | `string`     | yes       | sets a custom margin for the Text        |
+| className | `string`     | yes       | adds custom styling via classes          |
+| children  | `ReactNode`  | yes       | passes children objects to the paragraph |
+| fontSize  | `string`     | yes       | alters the size of the font              |
+
+##### TextWeight
+
+| Prop    | Pass as  |
+| ------- | -------- |
+| regular | `string` |
+| bold    | `string` |
+
+#### Textarea
+
+| Prop        | Type       | Optional? | Description                                                       |
+| ----------- | ---------- | --------- | ----------------------------------------------------------------- |
+| name        | `string`   | no        | gives the Textarea a dedicated name tag                           |
+| id          | `string`   | no        | sets an unique id for the Textarea                                |
+| width       | `string`   | yes       | customizes the width of the Textarea                              |
+| margin      | `string`   | yes       | sets a custom margin for the Textarea                             |
+| className   | `string`   | yes       | adds custom styling via classes                                   |
+| placeholder | `string`   | yes       | sets a placeholder to display a CTA within the textarea field     |
+| value       | `string`   | yes       | used to react to user inputs                                      |
+| required    | `boolean`  | yes       | defines if the Textarea is mandatory to be filled out by the user |
+| padding     | `string`   | yes       | sets a margin for the Textarea component                          |
+| rows        | `number`   | yes       | defines how many rows the textarea should span                    |
+| cols        | `number`   | yes       | defines how many cols the textarea should span                    |
+| textLength  | `string`   | yes       | sets the overall text length of the textarea                      |
+| borderColor | `string`   | yes       | sets a custom borderColor for the textarea                        |
+| wrap        | `string`   | yes       | defines if the textarea content should wrap or not                |
+| onChange    | `function` | yes       | passes a function if the Textarea should listen to changes        |
 
 #### TBC
 

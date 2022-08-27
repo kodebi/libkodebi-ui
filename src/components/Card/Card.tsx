@@ -10,8 +10,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 function activateBorder(style: boolean) {
-	if (style) return cs.CardWBorders;
-	else return cs.DefaultCard;
+	return style ? cs.CardWBorders : cs.DefaultCard;
 }
 
 export const Card: React.FC<CardProps> = React.forwardRef<
@@ -41,3 +40,9 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 );
 
 Card.displayName = 'Card';
+Card.defaultProps = {
+	withBorders: false,
+	center: false,
+	width: undefined,
+	height: undefined,
+};

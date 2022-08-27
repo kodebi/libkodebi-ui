@@ -7,6 +7,8 @@ export interface TextareaProps
 	id: string;
 	placeholder?: string;
 	value?: string;
+	margin?: string;
+	padding?: string;
 	rows?: number;
 	cols?: number;
 	textLength?: number;
@@ -20,18 +22,23 @@ export interface TextareaProps
 export const Textarea: React.FC<TextareaProps> = React.forwardRef<
 	HTMLTextAreaElement,
 	TextareaProps
->(({ rows, cols, borderColor, ...props }: TextareaProps, ref): JSX.Element => {
-	const Element = T.PrimaryTextarea;
-	return (
-		<Element
-			ref={ref}
-			rows={rows}
-			cols={cols}
-			style={{ borderColor }}
-			{...props}
-		/>
-	);
-});
+>(
+	(
+		{ rows, cols, borderColor, margin, padding, ...props }: TextareaProps,
+		ref
+	): JSX.Element => {
+		const Element = T.PrimaryTextarea;
+		return (
+			<Element
+				ref={ref}
+				rows={rows}
+				cols={cols}
+				style={{ borderColor, margin, padding }}
+				{...props}
+			/>
+		);
+	}
+);
 
 Textarea.displayName = 'Textarea';
 Textarea.defaultProps = {
@@ -43,4 +50,6 @@ Textarea.defaultProps = {
 	value: undefined,
 	onChange: undefined,
 	required: false,
+	margin: undefined,
+	padding: undefined,
 };

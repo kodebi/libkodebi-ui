@@ -22,17 +22,14 @@ export interface SelectProps
 	value?: string;
 	options?: Array<OptionProps>;
 	width?: string;
+	padding?: string;
+	margin?: string;
 	className?: string;
-	children?: React.ReactNode;
 	onChange?: () => void;
 }
 
 const getDropdownType = (type: DropdownType) => {
-	if (type === 'filter') {
-		return S.FilterSelect;
-	} else {
-		return S.PrimarySelect;
-	}
+	return type === 'filter' ? S.FilterSelect : S.PrimarySelect;
 };
 
 export const Select: React.FC<SelectProps> = React.forwardRef<
@@ -46,6 +43,8 @@ export const Select: React.FC<SelectProps> = React.forwardRef<
 			id,
 			value,
 			width,
+			padding,
+			margin,
 			options,
 			...props
 		}: SelectProps,
@@ -58,7 +57,7 @@ export const Select: React.FC<SelectProps> = React.forwardRef<
 				name={name}
 				id={id}
 				defaultValue={value}
-				style={{ width }}
+				style={{ width, padding, margin }}
 				data-testid="select-test"
 				{...props}
 			>
@@ -83,8 +82,9 @@ Select.defaultProps = {
 	name: 'Dropdown',
 	id: undefined,
 	value: 'Default',
+	padding: '0.5rem',
+	margin: '0.75rem',
 	options: undefined,
 	className: undefined,
-	children: undefined,
 	onChange: undefined,
 };

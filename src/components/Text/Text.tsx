@@ -10,6 +10,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 	fontSize?: string;
 	children?: React.ReactNode;
 	padding?: string;
+	margin?: string;
 }
 
 const getTextWeight = (type: TextWeight) => {
@@ -33,6 +34,7 @@ export const Text: React.FC<TextProps> = React.forwardRef<
 			color,
 			fontSize,
 			padding,
+			margin,
 			children,
 			...props
 		}: TextProps,
@@ -40,7 +42,11 @@ export const Text: React.FC<TextProps> = React.forwardRef<
 	): JSX.Element => {
 		const Element = getTextWeight(weight);
 		return (
-			<Element ref={ref} style={{ color, fontSize, padding }} {...props}>
+			<Element
+				ref={ref}
+				style={{ color, fontSize, padding, margin }}
+				{...props}
+			>
 				{children}
 			</Element>
 		);
@@ -54,4 +60,6 @@ Text.defaultProps = {
 	children: undefined,
 	color: undefined,
 	fontSize: undefined,
+	padding: '0.5rem',
+	margin: '0.75rem',
 };

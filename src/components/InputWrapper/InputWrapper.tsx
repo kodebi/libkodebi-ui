@@ -59,3 +59,17 @@ export const InputWrapper: React.FC<InputWrapperProps> = React.forwardRef<
 		);
 	}
 );
+
+InputWrapper.displayName = 'InputWrapper';
+InputWrapper.defaultProps = {
+	variant: 'primary',
+	htmlFor: 'Name',
+	name: 'Name',
+	id: 'some id',
+	placeholder: 'This could be your content',
+	type: 'text',
+	margin: undefined,
+	padding: undefined,
+	marginRight: '0.5rem',
+	textarea: false,
+};

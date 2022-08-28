@@ -5,15 +5,36 @@
     <img src="assets/kodebi_logo_classic.svg" alt="Logo" width="150" height="150">
   </a>
 
-<h3 align="center">Kodebi UI Component Library</h3>
+<h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
     The 0.0.1 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->
-
+  <p>
+    <a href="https://github.com/kodebi/libkodebi-ui">
+      <img src="https://img.shields.io/github/package-json/v/kodebi/libkodebi-ui" />
+    </a>
+    <a href="https://www.npmjs.com/package/@kodebi/libkodebi-ui">
+      <img src="https://img.shields.io/npm/v/@kodebi/libkodebi-ui" />
+    </a>
+    <a href="https://bundlephobia.com/package/@kodebi/libkodebi-ui@0.0.1">
+      <img src="https://img.shields.io/bundlephobia/min/@kodebi/libkodebi-ui" />
+    </a>
+    <a href="https://bundlephobia.com/package/@kodebi/libkodebi-ui@0.0.1">
+      <img src="https://img.shields.io/bundlephobia/minzip/@kodebi/libkodebi-ui" />
+    </a>
+    <a href="">
+      <img src="https://img.shields.io/npm/l/@kodebi/libkodebi-ui" />
+    </a>
+    <a href="">
+      <img src="https://img.shields.io/github/contributors/kodebi/libkodebi-ui" />
+    </a>
+  </p>
 </div>
+
+<br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -135,6 +156,12 @@ function App() {
 
 Components from the library come with a default styling, but are also customizable to some extent. In order to give a proper overview, we provide a full list of attributes for each component.
 
+#### AppShell
+
+| Prop     | Type        | Optional? | Description                                                        |
+| -------- | ----------- | --------- | ------------------------------------------------------------------ |
+| children | `ReactNode` | no        | wraps other components with the shell to inherit the Kodebi styles |
+
 #### Box
 
 | Prop            | Type         | Optional? | Description                                |
@@ -200,6 +227,13 @@ Components from the library come with a default styling, but are also customizab
 | height      | `string`    | yes       | sets a custom height for the Card             |
 | children    | `ReactNode` | yes       | passes children objects to the Card component |
 
+#### Footer
+
+| Prop  | Type                     | Optional? | Description                            |
+| ----- | ------------------------ | --------- | -------------------------------------- |
+| links | `Array` of `LinkWrapper` | yes       | passes an array of links to the footer |
+| icons | `Array` of `IconWrapper` | yes       | passes an arry of icons to the footer  |
+
 #### Input
 
 | Prop        | Type           | Optional? | Description                                                    |
@@ -234,6 +268,54 @@ Components from the library come with a default styling, but are also customizab
 | url            | `string` |
 | search         | `string` |
 | number         | `string` |
+
+#### InputWrapper
+
+| Prop        | Type            | Optional? | Description                                                |
+| ----------- | --------------- | --------- | ---------------------------------------------------------- |
+| variant     | `InputVariant`  | no        | defines the style of the InputWrapper                      |
+| name        | `string`        | no        | gives the InputWrapper a dedicated name tag                |
+| id          | `string`        | no        | sets an unique id for the InputWrapper                     |
+| type        | `InputType`     | no        | sets the Input type                                        |
+| htmlFor     | `string`        | no        | set the htmlFor tag for the label                          |
+| position    | `LabelPosition` | no        | defines the relative position of the label                 |
+| width       | `string`        | yes       | customizes the width of the InputWrapper                   |
+| margin      | `string`        | yes       | sets a custom margin for the InputWrapper                  |
+| marginRight | `string`        | yes       | defines a right margin for the label                       |
+| placeholder | `string`        | yes       | sets a placeholder to display a CTA within the input field |
+| padding     | `string`        | yes       | sets a custom padding for the input wrapper                |
+| textarea    | `boolean`       | yes       | if true, the Input gets replaced with a Textarea           |
+
+##### LabelPosition
+
+| Prop  | Pass as  |
+| ----- | -------- |
+| above | `string` |
+| left  | `string` |
+
+#### LinkWrapper
+
+| Prop     | Type        | Optional? | Description                                          |
+| -------- | ----------- | --------- | ---------------------------------------------------- |
+| to       | `string`    | no        | passes the path to link to respective route          |
+| type     | `LinkType`  | yes       | accepts `default`, `menu` and `footer` for styling   |
+| children | `ReactNode` | yes       | passes children objects to the LinkWrapper component |
+
+##### LinkType
+
+| Prop    | Pass as  |
+| ------- | -------- |
+| default | `string` |
+| menu    | `string` |
+| footer  | `string` |
+
+#### IconWrapper
+
+| Prop     | Type        | Optional? | Description                                          |
+| -------- | ----------- | --------- | ---------------------------------------------------- |
+| href     | `string`    | yes       | passes the path to link to external URLs             |
+| fontSize | `string`    | yes       | sets the size of the icon wrapper                    |
+| children | `ReactNode` | yes       | passes children objects to the IconWrapper component |
 
 #### Select
 

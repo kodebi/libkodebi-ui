@@ -31,6 +31,9 @@
     <a href="">
       <img src="https://img.shields.io/github/contributors/kodebi/libkodebi-ui" />
     </a>
+    <a href="">
+      <img src="https://img.shields.io/github/last-commit/kodebi/libkodebi-ui" />
+    </a>
   </p>
 </div>
 
@@ -390,8 +393,6 @@ Components from the library come with a default styling, but are also customizab
 | borderColor | `string`   | yes       | sets a custom borderColor for the textarea                        |
 | wrap        | `string`   | yes       | defines if the textarea content should wrap or not                |
 | onChange    | `function` | yes       | passes a function if the Textarea should listen to changes        |
-
-#### TBC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

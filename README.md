@@ -34,6 +34,9 @@
     <a href="">
       <img src="https://img.shields.io/github/last-commit/kodebi/libkodebi-ui" />
     </a>
+    <a href="">
+      <img src="https://img.shields.io/npm/dt/@kodebi/libkodebi-ui" />
+    </a>
   </p>
 </div>
 
@@ -108,25 +111,25 @@ Install the package via npm
 Clone the project
 
 ```sh
-  git clone https://github.com/kodebi/libkodebi-ui.git
+git clone https://github.com/kodebi/libkodebi-ui.git
 ```
 
 Go to the project directory
 
 ```sh
-  cd path/to/where_you_cloned_the_repo
+cd path/to/where_you_cloned_the_repo
 ```
 
 Install all the dependencies
 
 ```sh
-  npm install
+npm install
 ```
 
 Start Storybook and start developing
 
 ```sh
-  npm run storybook
+npm run storybook
 ```
 
 ### Run Tests
@@ -134,7 +137,7 @@ Start Storybook and start developing
 To run tests with the library, run the following command:
 
 ```sh
-  npm run test
+npm run test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -400,7 +403,11 @@ Components from the library come with a default styling, but are also customizab
 
 ## Contributing
 
-TBD
+<a href="https://github.com/kodebi/libkodebi-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kodebi/libkodebi-ui" />
+</a>
+
+Contributions are always welcome. Feel free to fork the repository, create a new branch and start developing. For merging your contributions, please open a PR and explicitly add me as a reviewer. After carefully checking and resolving potential merge conflicts or any remarks, the contributions will be merged. A release cycle needs to be determined in due time, so any propositions are highly welcome as well.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -408,7 +415,7 @@ TBD
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

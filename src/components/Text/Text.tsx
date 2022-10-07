@@ -60,6 +60,6 @@ Text.defaultProps = {
 	children: undefined,
 	color: undefined,
 	fontSize: undefined,
-	padding: '0.5rem',
-	margin: '0.75rem',
+	padding: undefined,
+	margin: undefined,
 };

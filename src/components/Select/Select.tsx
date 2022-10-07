@@ -3,7 +3,7 @@ import * as S from './Select.style';
 
 export interface OptionProps
 	extends React.OptionHTMLAttributes<HTMLOptionElement> {
-	key?: number;
+	key?: string | number;
 	value?: string | number;
 	title?: string;
 	name?: string;

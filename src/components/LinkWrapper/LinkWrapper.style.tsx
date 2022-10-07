@@ -3,12 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 export const WrappedLink = styled(NavLink)`
 	display: inline-block;
-	padding: 0.25rem;
 	transition: all 0.2s ease-in-out;
 	color: #d96c75;
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 0.875rem;
+	margin-right: 0.25rem;
+
+	@media (min-width: 800px) {
+		margin-right: 0.75rem;
+	} ;
 `;
 
 export const MenuLink = styled(WrappedLink)`

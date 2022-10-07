@@ -7,11 +7,13 @@ const DefaultButtonStyle = styled('button')`
 	cursor: pointer;
 	border-radius: 0.25rem;
 	border: solid 2px #d96c75;
-	padding: 0.25rem;
+	padding: 0.375rem;
+	margin: 0.75rem 0.5rem;
 	width: auto;
 
 	@media (min-width: 800px) {
-		padding: 0.5rem;
+		padding: 0.625rem;
+		margin: 1rem 0.75rem;
 	}
 `;
 

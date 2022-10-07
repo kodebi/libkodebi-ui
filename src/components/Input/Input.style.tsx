@@ -6,6 +6,7 @@ export const DefaultInputStyle = styled('input')`
 	border-radius: 0.25rem;
 	resize: none;
 	font-size: 0.75rem;
+	box-sizing: border-box;
 	width: 100%;
 
 	&:focus {
@@ -27,7 +28,13 @@ export const SecondaryInput = styled(DefaultInputStyle)`
 `;
 
 export const SearchInput = styled(DefaultInputStyle)`
-	border-radius: 25px;
-	border: 2px solid #d96c75;
+	padding: 0.5rem;
+	border-radius: 15px;
+	border: 1px solid #d96c75;
 	box-shadow: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
+
+	@media (min-width: 800px) {
+		width: 40vw;
+		padding: 0.75rem;
+	}
 `;

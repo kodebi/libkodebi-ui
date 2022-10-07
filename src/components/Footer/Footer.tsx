@@ -25,8 +25,15 @@ export const Footer: React.FC<FooterProps> = ({
 			>
 				<Box variant="flex-space-between" width="100%" maxWidth="1140px">
 					<Box variant="flex-col-start">
-						<Text>© 2022 Kodebi. All rights reserved</Text>
-						<Box variant="flex-align-start" width="100%" padding="0">
+						<Text margin="0 0 0.5rem 0">
+							© 2022 Kodebi. All rights reserved
+						</Text>
+						<Box
+							variant="flex-align-start"
+							width="100%"
+							padding="0"
+							margin="0.5rem 0 0 0"
+						>
 							{links?.map((link: LinkWrapperProps, index) => {
 								return (
 									<LinkWrapper type="footer" to={link.to} key={index}>
@@ -36,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({
 							})}
 						</Box>
 					</Box>
-					<Box variant="flex-align-start" padding="0" margin="14px 0">
+					<Box variant="flex-align-start">
 						{icons?.map((link: IconProps, index) => {
 							return (
 								<IconWrapper href={link.href} key={index}>

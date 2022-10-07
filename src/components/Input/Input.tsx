@@ -52,7 +52,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 				ref={ref}
 				data-testid="input-test"
 				type={type}
-				style={{ width }}
+				style={{ width, margin }}
 				{...props}
 			/>
 		);
@@ -64,7 +64,7 @@ Input.defaultProps = {
 	variant: 'primary',
 	name: 'Name des Inputfeldes',
 	id: 'Id des Inputfeldes',
-	placeholder: 'Hier könnte dein Inhalt stehen',
+	placeholder: 'Hier könnte dein Inhalt stehen...',
 	type: 'text',
 	width: undefined,
 	margin: undefined,

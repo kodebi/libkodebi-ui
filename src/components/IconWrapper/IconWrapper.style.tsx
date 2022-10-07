@@ -6,7 +6,6 @@ const IconLinkStyle = FlexBox.withComponent('a');
 export const IcoWrap = styled(IconLinkStyle)`
 	justify-content: center;
 	align-items: center;
-	margin: 0.25rem;
 	cursor: pointer;
 	text-decoration: none;
 	color: #242121;

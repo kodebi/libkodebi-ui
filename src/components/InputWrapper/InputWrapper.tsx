@@ -18,6 +18,8 @@ export interface InputWrapperProps
 	margin?: string;
 	marginRight?: string;
 	padding?: string;
+	required?: boolean;
+	labelColor?: string;
 }
 
 function determinePos(position: LabelPosition) {
@@ -39,6 +41,10 @@ export const InputWrapper: React.FC<InputWrapperProps> = React.forwardRef<
 			textarea,
 			marginRight,
 			padding,
+			margin,
+			required,
+			labelColor,
+			placeholder,
 			...props
 		},
 		ref
@@ -46,14 +52,25 @@ export const InputWrapper: React.FC<InputWrapperProps> = React.forwardRef<
 		const Label = iw.StyledLabel;
 		const Element = determinePos(position);
 		return (
-			<Element ref={ref} {...props} style={{ padding }}>
-				<Label id={id} htmlFor={htmlFor} style={{ marginRight }}>
+			<Element ref={ref} {...props} style={{ padding, margin }}>
+				<Label
+					id={id}
+					htmlFor={htmlFor}
+					style={{ marginRight, color: `${labelColor}` }}
+				>
 					{htmlFor}
 				</Label>
 				{textarea ? (
-					<Textarea id={id} name={name} />
+					<Textarea id={id} name={name} placeholder={placeholder} />
 				) : (
-					<Input id={id} variant={variant} type={type} name={name} />
+					<Input
+						id={id}
+						variant={variant}
+						type={type}
+						name={name}
+						placeholder={placeholder}
+						required
+					/>
 				)}
 			</Element>
 		);

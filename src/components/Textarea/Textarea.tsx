@@ -17,6 +17,7 @@ export interface TextareaProps
 	required?: boolean;
 	borderColor?: string;
 	onChange?: () => void;
+	onKeyPress?: () => void;
 }
 
 export const Textarea: React.FC<TextareaProps> = React.forwardRef<

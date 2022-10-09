@@ -6,12 +6,13 @@ export type ButtonType = 'button' | 'submit' | 'reset';
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	label: string;
+	label?: string;
 	variant?: ButtonStyle;
 	width?: string;
 	margin?: string;
 	className?: string;
 	type?: ButtonType;
+	children?: React.ReactNode;
 	onClick?: () => void;
 }
 
@@ -33,13 +34,21 @@ export const Button: React.FC<ButtonProps> = React.forwardRef<
 	ButtonProps
 >(
 	(
-		{ variant = 'signin', type = 'button', label, width, margin, ...props },
+		{
+			variant = 'signin',
+			type = 'button',
+			label,
+			width,
+			margin,
+			children,
+			...props
+		},
 		ref
 	): JSX.Element => {
 		const Element = checkBtnType(variant);
 		return (
 			<Element ref={ref} style={{ width, margin }} {...props}>
-				{label}
+				{label || children}
 			</Element>
 		);
 	}

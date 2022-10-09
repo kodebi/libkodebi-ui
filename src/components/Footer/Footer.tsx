@@ -8,11 +8,13 @@ import { KodebiFooter } from './Footer.style';
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 	links?: Array<LinkWrapperProps>;
 	icons?: Array<IconProps>;
+	maxWidth?: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({
 	links,
 	icons,
+	maxWidth,
 }): JSX.Element => {
 	return (
 		<KodebiFooter>
@@ -23,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({
 				position="relative"
 				backgroundColor="#D9C6BA"
 			>
-				<Box variant="flex-space-between" width="100%" maxWidth="1140px">
+				<Box variant="flex-space-between" width="100%" maxWidth={maxWidth}>
 					<Box variant="flex-col-start">
 						<Text margin="0 0 0.5rem 0">
 							© 2022 Kodebi. All rights reserved

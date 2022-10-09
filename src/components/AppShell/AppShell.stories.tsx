@@ -71,7 +71,7 @@ const options2 = [
 ];
 DiscoverBar.args = {
 	children: (
-		<Card withBorders>
+		<Card withBorders margin="0">
 			<Box variant="flex-space-between" padding="0.5rem">
 				<Button variant="filter" label="All" />
 				<Input

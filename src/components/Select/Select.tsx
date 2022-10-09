@@ -61,12 +61,11 @@ export const Select: React.FC<SelectProps> = React.forwardRef<
 				data-testid="select-test"
 				{...props}
 			>
-				{options?.map((option: OptionProps) => {
-					const { value, title, name, key, id } = option;
+				{options?.map((option: OptionProps, index: number) => {
+					const { value, title, name } = option;
 					const acceptedValues = value || title || name;
-					const acceptedKeys = key || id;
 					return (
-						<option key={acceptedKeys} value={acceptedValues} {...option}>
+						<option key={index} value={acceptedValues} {...option}>
 							{acceptedValues}
 						</option>
 					);

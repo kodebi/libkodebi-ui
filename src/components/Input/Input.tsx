@@ -23,6 +23,7 @@ export interface InputProps
 	value?: string;
 	required?: boolean;
 	onChange?: () => void;
+	onKeyPress?: () => void;
 }
 
 const getInputType = (type: InputVariant) => {

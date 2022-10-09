@@ -7,6 +7,8 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: React.ReactNode;
 	width?: string;
 	height?: string;
+	margin?: string;
+	backgroundColor?: string;
 }
 
 function activateBorder(style: boolean) {
@@ -18,7 +20,16 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 	CardProps
 >(
 	(
-		{ withBorders = false, center = false, children, width, height, ...props },
+		{
+			withBorders = false,
+			center = false,
+			children,
+			width,
+			height,
+			margin,
+			backgroundColor,
+			...props
+		},
 		ref
 	): JSX.Element => {
 		const Element = activateBorder(withBorders);
@@ -28,8 +39,10 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 				style={{
 					width,
 					height,
+					margin,
 					justifyContent: `${center && 'center'}`,
 					alignItems: `${center && 'center'}`,
+					backgroundColor,
 				}}
 				{...props}
 			>

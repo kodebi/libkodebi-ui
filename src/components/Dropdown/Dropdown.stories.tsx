@@ -16,10 +16,7 @@ Default.args = {
 	name: 'Dropdown',
 	variant: 'default',
 	width: '50%',
-	options: [
-		{ id: 1, value: 'Test' },
-		{ id: 2, value: 'Hello' },
-	],
+	options: ['Test', 'Hello'],
 };
 
 export const Filter = Template.bind({});

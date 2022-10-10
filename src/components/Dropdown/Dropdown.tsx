@@ -92,8 +92,13 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 					{...props}
 				>
 					{options?.map((option: OptionProps, index: number) => {
+						let acceptedValues;
 						const { value, title, name } = option;
-						const acceptedValues = value || title || name;
+						if (option instanceof Object) {
+							acceptedValues = value || title || name;
+						} else {
+							acceptedValues = option;
+						}
 						return (
 							<option key={index} value={acceptedValues} {...option}>
 								{acceptedValues}

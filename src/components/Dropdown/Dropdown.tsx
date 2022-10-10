@@ -7,8 +7,6 @@ export interface OptionProps
 	extends React.OptionHTMLAttributes<HTMLOptionElement> {
 	key?: string | number;
 	value?: string | number;
-	title?: string;
-	name?: string;
 	className?: string;
 	width?: string;
 	onClick?: () => void;
@@ -93,9 +91,9 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 				>
 					{options?.map((option: OptionProps, index: number) => {
 						let acceptedValues;
-						const { value, title, name } = option;
+						const { value } = option;
 						if (option instanceof Object) {
-							acceptedValues = value || title || name;
+							acceptedValues = value;
 						} else {
 							acceptedValues = option;
 						}

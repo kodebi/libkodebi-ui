@@ -5,8 +5,6 @@ const DefaultSelectStyle = DefaultInputStyle.withComponent('select');
 
 export const PrimarySelect = styled(DefaultSelectStyle)`
 	border-color: #d96c75;
-	background-color: #d96c75;
-	color: #fff;
 `;
 
 export const FilterSelect = styled(DefaultSelectStyle)`

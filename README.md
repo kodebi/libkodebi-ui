@@ -8,7 +8,7 @@
 <h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
-    The 0.0.7 version of the UI components for the Kodebi Web App and Website.
+    The 0.0.8 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->
@@ -345,11 +345,9 @@ Components from the library come with a default styling, but are also customizab
 ##### Options
 
 | Prop      | Type                 | Optional? | Description                                                |
-| --------- | -------------------- | --------- | ---------------------------------------------------------- |
+| --------- | -------------------- | --------- | ---------------------------------------------------------- | --- |
 | key       | `string`             | yes       | passes the index of the array as unique key                |
-| value     | `string` or `number` | yes       | sets a value for the option component                      |
-| title     | `string`             | yes       | defines a title for the option                             |
-| name      | `string`             | yes       | defines a name for the option                              |
+| value     | `string` or `number` | yes       | sets a value for the option component                      |     |
 | width     | `string`             | yes       | sets a custom width for the option                         |
 | className | `string`             | yes       | adds custom styling via classes                            |
 | onClick   | `function`           | yes       | passes a function which propagates to the Select component |

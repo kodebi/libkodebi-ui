@@ -13,6 +13,7 @@ export interface InputWrapperProps
 	position: LabelPosition;
 	variant: InputVariant;
 	type: InputType;
+	value?: string;
 	placeholder?: string;
 	textarea?: boolean;
 	margin?: string;
@@ -45,6 +46,7 @@ export const InputWrapper: React.FC<InputWrapperProps> = React.forwardRef<
 			required,
 			labelColor,
 			placeholder,
+			value,
 			...props
 		},
 		ref
@@ -69,6 +71,7 @@ export const InputWrapper: React.FC<InputWrapperProps> = React.forwardRef<
 						type={type}
 						name={name}
 						placeholder={placeholder}
+						value={value}
 						required
 					/>
 				)}

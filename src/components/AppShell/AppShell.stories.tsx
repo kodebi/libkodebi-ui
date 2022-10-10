@@ -83,9 +83,29 @@ DiscoverBar.args = {
 					type="search"
 					margin="0.5rem"
 					placeholder="Such mal was..."
+					width="40vw"
 				/>
-				<Dropdown options={options1} />
-				<Dropdown options={options2} />
+				<Dropdown margin="0.5rem" options={options1} />
+				<Dropdown margin="0.5rem" options={options2} />
+			</Box>
+		</Card>
+	),
+};
+export const BookUpload = Template.bind({});
+BookUpload.args = {
+	children: (
+		<Card withBorders margin="0">
+			<Box variant="flex-col" padding="0.5rem">
+				<InputWrapper
+					htmlFor="Titel: "
+					id="title"
+					name="title"
+					type="text"
+					variant="primary"
+					position="above"
+					placeholder="Titel eingeben"
+				/>
+				<Dropdown label position="above" name="Genre" options={options1} />
 			</Box>
 		</Card>
 	),

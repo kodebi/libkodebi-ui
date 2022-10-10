@@ -13,28 +13,25 @@ export const FilterSelect = styled(DefaultSelectStyle)`
 	box-shadow: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
 `;
 
-export const DumbWrapper = styled('section')`
+export const ListOption = styled('option')`
 	display: block;
+	background-color: #fff;
+	color: #fff;
 `;
 
-export const withLabelAbove = styled('section')`
+export const DumbWrapper = styled('section')`
+	display: flex;
 	margin: 0.125rem 0.5rem;
+	width: 100%;
+
+	@media (min-width: 800px) {
+		margin: 0.25rem 0.75rem;
+	}
+`;
+
+export const withLabelAbove = styled(DumbWrapper)`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	width: auto;
-
-	@media (min-width: 800px) {
-		margin: 0.25rem 0.75rem;
-	}
-`;
-
-export const withLabelLeft = styled('section')`
-	margin: 0.125rem 0.5rem;
-	display: flex;
-	width: auto;
-
-	@media (min-width: 800px) {
-		margin: 0.25rem 0.75rem;
-	}
 `;

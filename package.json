@@ -1,6 +1,6 @@
 {
 	"name": "@kodebi/libkodebi-ui",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "The library for reusable UI components in Kodebi apps",
 	"repository": "https://github.com/kodebi/libkodebi-ui.git",
 	"author": "Chris Schimetschka <chris.schimetschka@gmail.com>",
@@ -19,16 +19,16 @@
 	"dependencies": {
 		"@emotion/react": "^11.7.1",
 		"@emotion/styled": "^11.6.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.2.1"
 	},
 	"peerDependencies": {
 		"@babel/core": "^7.16.7",
 		"@emotion/react": "^11.7.1",
 		"@emotion/styled": "^11.6.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.2.1"
 	},
 	"devDependencies": {
@@ -44,15 +44,15 @@
 		"@storybook/builder-webpack5": "^6.4.13",
 		"@storybook/manager-webpack5": "^6.4.13",
 		"@storybook/react": "^6.4.13",
-		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^12.1.4",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^14.1.0",
 		"@types/jest": "^27.4.1",
 		"@types/node": "^17.0.8",
 		"@types/react": "^17.0.38",
 		"jest": "^27.5.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-icons": "^4.3.1",
 		"react-router-dom": "^6.2.1",
 		"rollup": "^2.78.1",

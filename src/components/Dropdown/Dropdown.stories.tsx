@@ -17,6 +17,7 @@ Default.args = {
 	variant: 'default',
 	width: '50%',
 	options: ['Test', 'Hello'],
+	label: true,
 };
 
 export const Filter = Template.bind({});

@@ -4,11 +4,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 const options = [
 	{
 		key: 1,
-		title: 'test1',
+		value: 'test1',
 	},
 	{
 		key: 2,
-		title: 'test2',
+		value: 'test2',
 	},
 ];
 
@@ -69,5 +69,22 @@ describe('Dropdown', () => {
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		fireEvent.change(dropdownElem, { target: { value: 'test2' } });
 		expect(dropdownElem).toHaveDisplayValue(/test2/i);
+	});
+
+	it('displays the label', () => {
+		render(
+			<Dropdown
+				label
+				position="above"
+				options={options}
+				value="test2"
+				id="label-id"
+				name="Test"
+			>
+				{options}
+			</Dropdown>
+		);
+		const wrappingElem = screen.getByTestId(/label-testid/i);
+		expect(wrappingElem).toBeInTheDocument();
 	});
 });

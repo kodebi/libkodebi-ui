@@ -8,7 +8,7 @@
 <h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
-    The 0.0.8 version of the UI components for the Kodebi Web App and Website.
+    The 0.0.9 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->

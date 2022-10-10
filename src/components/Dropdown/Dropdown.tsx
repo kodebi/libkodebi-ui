@@ -7,6 +7,8 @@ export interface OptionProps
 	extends React.OptionHTMLAttributes<HTMLOptionElement> {
 	key?: string | number;
 	value?: string | number;
+	title?: string;
+	name?: string;
 	className?: string;
 	width?: string;
 	onClick?: () => void;
@@ -18,7 +20,6 @@ export interface DropdownProps
 	extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	variant?: DropdownType;
 	name?: string;
-	id?: string;
 	value?: string;
 	options?: Array<OptionProps>;
 	width?: string;
@@ -40,7 +41,7 @@ const determineLabelPos = (label: boolean, position: LabelPosition) => {
 	return label
 		? position === 'above'
 			? D.withLabelAbove
-			: D.withLabelLeft
+			: D.DumbWrapper
 		: D.DumbWrapper;
 };
 
@@ -67,6 +68,7 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 		ref
 	): JSX.Element => {
 		const Label = L.StyledLabel;
+		const Option = D.ListOption;
 		const Wrapper = determineLabelPos(label, position);
 		const Element = getDropdownType(variant);
 		return (
@@ -76,13 +78,13 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 						id={id}
 						htmlFor={name}
 						style={{ marginRight, color: `${labelColor}` }}
+						data-testid="label-testid"
 					>
 						{`${name}: `}
 					</Label>
 				)}
 				<Element
 					ref={ref}
-					name={name}
 					id={id}
 					defaultValue={value}
 					style={{ width, padding, margin }}
@@ -91,16 +93,16 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 				>
 					{options?.map((option: OptionProps, index: number) => {
 						let acceptedValues;
-						const { value } = option;
+						const { value, title, name } = option;
 						if (option instanceof Object) {
-							acceptedValues = value;
+							acceptedValues = value || title || name;
 						} else {
 							acceptedValues = option;
 						}
 						return (
-							<option key={index} value={acceptedValues} {...option}>
+							<Option key={index} value={acceptedValues} {...option}>
 								{acceptedValues}
-							</option>
+							</Option>
 						);
 					})}
 				</Element>

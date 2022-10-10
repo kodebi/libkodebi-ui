@@ -107,6 +107,7 @@
 		"lib",
 		"storybook-static",
 		"src/**/*.stories.tsx",
+		"src/**/*.test.tsx",
 		"src/stories"
 	]
 }

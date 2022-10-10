@@ -8,7 +8,7 @@
 <h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
-    The 0.0.4 version of the UI components for the Kodebi Web App and Website.
+    The 0.0.6 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->
@@ -206,6 +206,7 @@ Components from the library come with a default styling, but are also customizab
 | margin    | `string`      | yes       | sets a custom margin for the Button                      |
 | className | `string`      | yes       | adds custom styling via classes                          |
 | onClick   | `function`    | yes       | passes a function if the Button should perform an action |
+| children  | `ReactNode`   | yes       | passes children objects to the Card component            |
 
 ##### ButtonStyle
 
@@ -323,7 +324,7 @@ Components from the library come with a default styling, but are also customizab
 | fontSize | `string`    | yes       | sets the size of the icon wrapper                    |
 | children | `ReactNode` | yes       | passes children objects to the IconWrapper component |
 
-#### Select
+#### Dropdown
 
 | Prop        | Type                 | Optional? | Description                                                 |
 | ----------- | -------------------- | --------- | ----------------------------------------------------------- |
@@ -337,6 +338,8 @@ Components from the library come with a default styling, but are also customizab
 | className   | `string`             | yes       | adds custom styling via classes                             |
 | placeholder | `string`             | yes       | sets a placeholder to display a CTA within the select field |
 | value       | `string`             | yes       | used to react to user inputs                                |
+| label       | `boolean`            | yes       | defines if the Dropdown needs a label tag or not            |
+| position    | `LabelPosition`      | yes       | defines the relative position of the label                  |
 | onChange    | `function`           | yes       | passes a function if the Dropdown should listen to changes  |
 
 ##### Options

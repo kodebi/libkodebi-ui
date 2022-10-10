@@ -1,18 +1,18 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Select } from './Select';
+import { Dropdown } from './Dropdown';
 
 export default {
-	title: 'libkodebi-ui/Select',
-	component: Select,
-} as ComponentMeta<typeof Select>;
+	title: 'libkodebi-ui/Dropdown',
+	component: Dropdown,
+} as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Select> = (args) => (
-	<Select {...args}></Select>
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+	<Dropdown {...args}></Dropdown>
 );
 
-export const Dropdown = Template.bind({});
-Dropdown.args = {
+export const Default = Template.bind({});
+Default.args = {
 	name: 'Dropdown',
 	variant: 'default',
 	width: '50%',

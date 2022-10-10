@@ -7,7 +7,7 @@ export const StyledLabel = styled('label')`
 	text-align: left;
 	align-items: center;
 	cursor: default;
-	margin-right: 0.25rem;
+	margin-right: 0.5rem;
 `;
 
 export const WrapLabelLeft = styled('div')`

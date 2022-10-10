@@ -3,7 +3,7 @@ import * as iw from './InputWrapper.style';
 import { Input, InputVariant, InputType } from '../Input';
 import { Textarea } from '../Textarea';
 
-type LabelPosition = 'above' | 'left';
+export type LabelPosition = 'above' | 'left' | undefined;
 
 export interface InputWrapperProps
 	extends React.HTMLAttributes<HTMLDivElement> {
@@ -87,6 +87,6 @@ InputWrapper.defaultProps = {
 	type: 'text',
 	margin: undefined,
 	padding: undefined,
-	marginRight: '0.5rem',
+	marginRight: undefined,
 	textarea: false,
 };

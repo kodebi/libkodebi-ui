@@ -1,4 +1,4 @@
-import { Select } from './Select';
+import { Dropdown } from './Dropdown';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 const options = [
@@ -12,12 +12,12 @@ const options = [
 	},
 ];
 
-describe('Select', () => {
+describe('Dropdown', () => {
 	it('renders default dropdown with options', () => {
 		render(
-			<Select variant="default" options={options}>
+			<Dropdown variant="default" options={options}>
 				{options}
-			</Select>
+			</Dropdown>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toBeInTheDocument();
@@ -25,9 +25,14 @@ describe('Select', () => {
 
 	it('renders filter dropdown with id, name, and options', () => {
 		render(
-			<Select variant="filter" id="some-id" name="some-name" options={options}>
+			<Dropdown
+				variant="filter"
+				id="some-id"
+				name="some-name"
+				options={options}
+			>
 				{options}
-			</Select>
+			</Dropdown>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toBeInTheDocument();
@@ -35,7 +40,7 @@ describe('Select', () => {
 
 	it('renders default dropdown with custom width', () => {
 		render(
-			<Select
+			<Dropdown
 				variant="default"
 				id="some-id"
 				name="some-name"
@@ -43,7 +48,7 @@ describe('Select', () => {
 				options={options}
 			>
 				{options}
-			</Select>
+			</Dropdown>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toHaveStyle({ width: '100%' });
@@ -51,7 +56,7 @@ describe('Select', () => {
 
 	it('changes the value when clicked', () => {
 		render(
-			<Select
+			<Dropdown
 				variant="default"
 				id="some-id"
 				name="some-name"
@@ -59,7 +64,7 @@ describe('Select', () => {
 				options={options}
 			>
 				{options}
-			</Select>
+			</Dropdown>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		fireEvent.change(dropdownElem, { target: { value: 'test2' } });

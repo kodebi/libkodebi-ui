@@ -1,13 +1,15 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { AppShell } from './AppShell';
-import { Box } from '../Box';
-import { Button } from '../Button';
-import { Card } from '../Card';
-import { Text } from '../Text';
-import { InputWrapper } from '../InputWrapper';
-import { Input } from '../Input';
-import { Select } from '../Select';
+import {
+	AppShell,
+	Box,
+	Button,
+	Card,
+	Text,
+	InputWrapper,
+	Input,
+	Dropdown,
+} from '../../';
 
 export default {
 	title: 'libkodebi-ui/AppShell',
@@ -82,8 +84,8 @@ DiscoverBar.args = {
 					margin="0.5rem"
 					placeholder="Such mal was..."
 				/>
-				<Select options={options1} />
-				<Select options={options2} />
+				<Dropdown options={options1} />
+				<Dropdown options={options2} />
 			</Box>
 		</Card>
 	),

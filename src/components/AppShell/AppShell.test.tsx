@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { AppShell } from './AppShell';
 import { Button } from '../Button';
 import { render } from '@testing-library/react';

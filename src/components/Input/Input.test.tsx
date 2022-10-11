@@ -1,5 +1,6 @@
-import { Input } from './Input';
+import * as React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { Input } from './Input';
 
 describe('Input', () => {
 	it('renders primary input correctly', () => {
@@ -70,5 +71,21 @@ describe('Input', () => {
 		const inputElem = screen.getByPlaceholderText(/with width/i);
 		fireEvent.change(inputElem, { target: { value: 'test' } });
 		expect(inputElem).toHaveDisplayValue(/test/i);
+	});
+
+	it('renders InputWrapper correctly', () => {
+		render(
+			<Input
+				position="left"
+				htmlFor="Test"
+				id="testinput"
+				name="testinput"
+				variant="primary"
+				type="text"
+				placeholder="testing"
+			/>
+		);
+		const wrapElem = screen.getByPlaceholderText(/testing/i);
+		expect(wrapElem).toBeInTheDocument();
 	});
 });

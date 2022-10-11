@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as D from './Dropdown.style';
-import * as L from '../InputWrapper/InputWrapper.style';
-import { LabelPosition } from '../InputWrapper';
+import * as L from '../Input/Input.style';
+import { LabelPosition } from '../Input';
 
 export interface OptionProps
 	extends React.OptionHTMLAttributes<HTMLOptionElement> {

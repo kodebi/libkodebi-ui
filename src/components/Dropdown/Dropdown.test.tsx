@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Dropdown } from './Dropdown';
 import { render, screen, fireEvent } from '@testing-library/react';
 
@@ -14,11 +15,7 @@ const options = [
 
 describe('Dropdown', () => {
 	it('renders default dropdown with options', () => {
-		render(
-			<Dropdown variant="default" options={options}>
-				{options}
-			</Dropdown>
-		);
+		render(<Dropdown variant="default" options={options} />);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toBeInTheDocument();
 	});
@@ -30,9 +27,7 @@ describe('Dropdown', () => {
 				id="some-id"
 				name="some-name"
 				options={options}
-			>
-				{options}
-			</Dropdown>
+			/>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toBeInTheDocument();
@@ -46,9 +41,7 @@ describe('Dropdown', () => {
 				name="some-name"
 				width="100%"
 				options={options}
-			>
-				{options}
-			</Dropdown>
+			/>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		expect(dropdownElem).toHaveStyle({ width: '100%' });
@@ -62,9 +55,7 @@ describe('Dropdown', () => {
 				name="some-name"
 				value="test1"
 				options={options}
-			>
-				{options}
-			</Dropdown>
+			/>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
 		fireEvent.change(dropdownElem, { target: { value: 'test2' } });
@@ -80,9 +71,7 @@ describe('Dropdown', () => {
 				value="test2"
 				id="label-id"
 				name="Test"
-			>
-				{options}
-			</Dropdown>
+			/>
 		);
 		const wrappingElem = screen.getByTestId(/label-testid/i);
 		expect(wrappingElem).toBeInTheDocument();

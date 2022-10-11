@@ -9,8 +9,8 @@ export default {
 
 const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />;
 
-export const Bo = Template.bind({});
-Bo.args = {
+export const Test = Template.bind({});
+Test.args = {
 	width: '100%',
 	height: 'auto',
 	children: 'Text',

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { IconWrapper } from './IconWrapper';
 import { render, screen } from '@testing-library/react';
 import { FaGithub } from 'react-icons/fa';

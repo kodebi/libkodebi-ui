@@ -6,7 +6,5 @@ export * from './components/Dropdown';
 export * from './components/Footer';
 export * from './components/IconWrapper';
 export * from './components/Input';
-export * from './components/InputWrapper';
 export * from './components/LinkWrapper';
 export * from './components/Text';
-export * from './components/Textarea';

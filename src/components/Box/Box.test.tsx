@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Box } from './Box';
 import { render, screen } from '@testing-library/react';
 

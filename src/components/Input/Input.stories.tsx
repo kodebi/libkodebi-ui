@@ -26,3 +26,38 @@ Search.args = {
 	name: 'Suche',
 	placeholder: 'Suche...',
 };
+
+export const LeftLabelInput = Template.bind({});
+LeftLabelInput.args = {
+	id: 'testid',
+	name: 'Test',
+	type: 'text',
+	variant: 'primary',
+	position: 'left',
+	textarea: false,
+	placeholder: 'Hier könnte Dein Inhalt stehen...',
+};
+
+export const AboveLabelInput = Template.bind({});
+AboveLabelInput.args = {
+	id: 'testid',
+	name: 'Test',
+	type: 'text',
+	variant: 'primary',
+	position: 'above',
+	textarea: false,
+	placeholder: 'Hier könnte Dein Inhalt stehen...',
+	padding: '0.25rem',
+};
+
+export const TextareaTest = Template.bind({});
+TextareaTest.args = {
+	id: 'testid',
+	name: 'Test',
+	type: 'text',
+	variant: 'primary',
+	position: 'above',
+	textarea: true,
+	placeholder: 'Hier könnte Dein Inhalt stehen...',
+	padding: '0.25rem',
+};

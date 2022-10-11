@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Footer } from './Footer';
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';

@@ -1,15 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {
-	AppShell,
-	Box,
-	Button,
-	Card,
-	Text,
-	InputWrapper,
-	Input,
-	Dropdown,
-} from '../../';
+import { AppShell, Box, Button, Card, Text, Input, Dropdown } from '../../';
 
 export default {
 	title: 'libkodebi-ui/AppShell',
@@ -26,8 +17,8 @@ LoginForm.args = {
 	children: (
 		<Card withBorders>
 			<Box variant="flex-col" padding="0.5rem">
-				<InputWrapper
-					htmlFor="Email: "
+				<Input
+					label
 					id="email"
 					name="Email"
 					type="email"
@@ -35,10 +26,10 @@ LoginForm.args = {
 					position="above"
 					placeholder="Email eingeben"
 				/>
-				<InputWrapper
-					htmlFor="Password: "
+				<Input
+					label
 					id="password"
-					name="password"
+					name="Passwort"
 					type="password"
 					variant="primary"
 					position="above"
@@ -78,7 +69,7 @@ DiscoverBar.args = {
 				<Button variant="filter" label="All" />
 				<Input
 					variant="search"
-					name="search"
+					name="Suche"
 					id="search"
 					type="search"
 					margin="0.5rem"
@@ -96,12 +87,11 @@ BookUpload.args = {
 	children: (
 		<Card withBorders margin="0">
 			<Box variant="flex-col" padding="0.5rem">
-				<InputWrapper
-					htmlFor="Titel: "
+				<Input
+					label
 					id="title"
-					name="title"
+					name="Titel"
 					type="text"
-					variant="primary"
 					position="above"
 					placeholder="Titel eingeben"
 				/>

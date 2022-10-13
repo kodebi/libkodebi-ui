@@ -34,7 +34,6 @@ export const SearchInput = styled(DefaultInputStyle)`
 	box-shadow: 1px 6px 6px -6px rgba(0, 0, 0, 0.75);
 
 	@media (min-width: 800px) {
-		width: 40vw;
 		padding: 0.75rem;
 	}
 `;

@@ -8,7 +8,7 @@
 <h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
-    The 0.0.9 version of the UI components for the Kodebi Web App and Website.
+    The 1.0.0 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->
@@ -226,13 +226,22 @@ Components from the library come with a default styling, but are also customizab
 
 #### Card
 
-| Prop        | Type        | Optional? | Description                                   |
-| ----------- | ----------- | --------- | --------------------------------------------- |
-| withBorders | `boolean`   | yes       | sets a border for the Card component          |
-| center      | `boolean`   | yes       | centers content within the Card               |
-| width       | `string`    | yes       | customizes the width of the Card              |
-| height      | `string`    | yes       | sets a custom height for the Card             |
-| children    | `ReactNode` | yes       | passes children objects to the Card component |
+| Prop        | Type             | Optional? | Description                                                  |
+| ----------- | ---------------- | --------- | ------------------------------------------------------------ |
+| withBorders | `boolean`        | yes       | sets a border for the Card component                         |
+| shadow      | `CardShadowType` | yes       | defines the shadow of the border if border is passed as true |
+| center      | `boolean`        | yes       | centers content within the Card                              |
+| width       | `string`         | yes       | customizes the width of the Card                             |
+| height      | `string`         | yes       | sets a custom height for the Card                            |
+| children    | `ReactNode`      | yes       | passes children objects to the Card component                |
+
+##### CardShadowType
+
+| Prop   | Pass as  |
+| ------ | -------- |
+| none   | `string` |
+| light  | `string` |
+| bright | `string` |
 
 #### Footer
 
@@ -243,19 +252,28 @@ Components from the library come with a default styling, but are also customizab
 
 #### Input
 
-| Prop        | Type           | Optional? | Description                                                    |
-| ----------- | -------------- | --------- | -------------------------------------------------------------- |
-| variant     | `InputVariant` | no        | defines the style of the Input                                 |
-| name        | `string`       | no        | gives the Input a dedicated name tag                           |
-| id          | `string`       | no        | sets an unique id for the Input                                |
-| type        | `InputType`    | no        | sets the Input type                                            |
-| width       | `string`       | yes       | customizes the width of the Input                              |
-| margin      | `string`       | yes       | sets a custom margin for the Input                             |
-| className   | `string`       | yes       | adds custom styling via classes                                |
-| placeholder | `string`       | yes       | sets a placeholder to display a CTA within the input field     |
-| value       | `string`       | yes       | used to react to user inputs                                   |
-| required    | `boolean`      | yes       | defines if the Input is mandatory to be filled out by the user |
-| onChange    | `function`     | yes       | passes a function if the Input should listen to changes        |
+| Prop        | Type            | Optional? | Description                                                    |
+| ----------- | --------------- | --------- | -------------------------------------------------------------- |
+| variant     | `InputVariant`  | yes       | defines the style of the Input                                 |
+| name        | `string`        | yes       | gives the Input a dedicated name tag                           |
+| id          | `string`        | yes       | sets an unique id for the Input                                |
+| type        | `InputType`     | yes       | sets the Input type                                            |
+| width       | `string`        | yes       | customizes the width of the Input                              |
+| margin      | `string`        | yes       | sets a custom margin for the Input                             |
+| position    | `LabelPosition` | yes       | defines the relative position of the label                     |
+| className   | `string`        | yes       | adds custom styling via classes                                |
+| placeholder | `string`        | yes       | sets a placeholder to display a CTA within the input field     |
+| value       | `string`        | yes       | used to react to user inputs                                   |
+| marginRight | `string`        | yes       | defines a right margin for the label                           |
+| required    | `boolean`       | yes       | defines if the Input is mandatory to be filled out by the user |
+| onChange    | `function`      | yes       | passes a function if the Input should listen to changes        |
+| textarea    | `boolean`       | yes       | if true, the Input gets replaced with a Textarea               |
+| rows        | `number`        | yes       | defines how many rows the textarea should span                 |
+| cols        | `number`        | yes       | defines how many cols the textarea should span                 |
+| textLength  | `string`        | yes       | sets the overall text length of the textarea                   |
+| borderColor | `string`        | yes       | sets a custom borderColor for the Input                        |
+| labelColor  | `string`        | yes       | sets a custom color for the Input label                        |
+| wrap        | `string`        | yes       | defines if the textarea content should wrap or no              |
 
 ##### InputVariant
 
@@ -275,23 +293,6 @@ Components from the library come with a default styling, but are also customizab
 | url            | `string` |
 | search         | `string` |
 | number         | `string` |
-
-#### InputWrapper
-
-| Prop        | Type            | Optional? | Description                                                |
-| ----------- | --------------- | --------- | ---------------------------------------------------------- |
-| variant     | `InputVariant`  | no        | defines the style of the InputWrapper                      |
-| name        | `string`        | no        | gives the InputWrapper a dedicated name tag                |
-| id          | `string`        | no        | sets an unique id for the InputWrapper                     |
-| type        | `InputType`     | no        | sets the Input type                                        |
-| htmlFor     | `string`        | no        | set the htmlFor tag for the label                          |
-| position    | `LabelPosition` | no        | defines the relative position of the label                 |
-| width       | `string`        | yes       | customizes the width of the InputWrapper                   |
-| margin      | `string`        | yes       | sets a custom margin for the InputWrapper                  |
-| marginRight | `string`        | yes       | defines a right margin for the label                       |
-| placeholder | `string`        | yes       | sets a placeholder to display a CTA within the input field |
-| padding     | `string`        | yes       | sets a custom padding for the input wrapper                |
-| textarea    | `boolean`       | yes       | if true, the Input gets replaced with a Textarea           |
 
 ##### LabelPosition
 
@@ -377,26 +378,6 @@ Components from the library come with a default styling, but are also customizab
 | ------- | -------- |
 | regular | `string` |
 | bold    | `string` |
-
-#### Textarea
-
-| Prop        | Type       | Optional? | Description                                                       |
-| ----------- | ---------- | --------- | ----------------------------------------------------------------- |
-| name        | `string`   | no        | gives the Textarea a dedicated name tag                           |
-| id          | `string`   | no        | sets an unique id for the Textarea                                |
-| width       | `string`   | yes       | customizes the width of the Textarea                              |
-| margin      | `string`   | yes       | sets a custom margin for the Textarea                             |
-| className   | `string`   | yes       | adds custom styling via classes                                   |
-| placeholder | `string`   | yes       | sets a placeholder to display a CTA within the textarea field     |
-| value       | `string`   | yes       | used to react to user inputs                                      |
-| required    | `boolean`  | yes       | defines if the Textarea is mandatory to be filled out by the user |
-| padding     | `string`   | yes       | sets a margin for the Textarea component                          |
-| rows        | `number`   | yes       | defines how many rows the textarea should span                    |
-| cols        | `number`   | yes       | defines how many cols the textarea should span                    |
-| textLength  | `string`   | yes       | sets the overall text length of the textarea                      |
-| borderColor | `string`   | yes       | sets a custom borderColor for the textarea                        |
-| wrap        | `string`   | yes       | defines if the textarea content should wrap or not                |
-| onChange    | `function` | yes       | passes a function if the Textarea should listen to changes        |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -14,7 +14,7 @@ describe('Input', () => {
 			<Input
 				type="password"
 				variant="secondary"
-				name="secondary"
+				name="Secondary"
 				id="secondary"
 			/>
 		);
@@ -33,7 +33,7 @@ describe('Input', () => {
 			<Input
 				type="text"
 				variant="primary"
-				name="test"
+				name="Test"
 				id="test"
 				placeholder="new placeholder"
 			/>
@@ -49,7 +49,7 @@ describe('Input', () => {
 				variant="primary"
 				width="100%"
 				id="wdth"
-				name="wdth"
+				name="Width"
 				placeholder="with width"
 			/>
 		);
@@ -77,9 +77,8 @@ describe('Input', () => {
 		render(
 			<Input
 				position="left"
-				htmlFor="Test"
 				id="testinput"
-				name="testinput"
+				name="Test"
 				variant="primary"
 				type="text"
 				placeholder="testing"

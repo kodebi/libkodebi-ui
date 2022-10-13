@@ -19,7 +19,6 @@ export interface InputProps
 	type?: InputType;
 	name?: string;
 	id?: string;
-	htmlFor?: string;
 	width?: string;
 	margin?: string;
 	className?: string;
@@ -83,6 +82,8 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 			wrap,
 			rows,
 			cols,
+			borderColor,
+			textLength,
 			...props
 		}: InputProps,
 		ref
@@ -112,6 +113,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 						wrap={wrap}
 						rows={rows}
 						cols={cols}
+						style={{ width, margin, borderColor }}
 						data-testid="textarea-test"
 					/>
 				) : (
@@ -120,7 +122,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 						data-testid="input-test"
 						type={type}
 						defaultValue={value}
-						style={{ width, margin }}
+						style={{ width, margin, borderColor }}
 						placeholder={placeholder}
 						{...props}
 					/>

@@ -23,6 +23,7 @@ Secondary.args = {
 
 export const Search = Template.bind({});
 Search.args = {
+	variant: 'search',
 	name: 'Suche',
 	placeholder: 'Suche...',
 };

@@ -33,3 +33,14 @@ export const FlexAlignStart = styled(FlexBox)`
 export const FlexAlignEnd = styled(FlexBox)`
 	align-items: flex-end;
 `;
+
+export const ShelfFlex = styled('section')`
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+	@media (min-width: 800px) {
+		flex-flow: row;
+		justify-content: space-around;
+	}
+`;

@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof AppShell> = (args) => (
 export const LoginForm = Template.bind({});
 LoginForm.args = {
 	children: (
-		<Card withBorders>
+		<Card withBorders shadow="bright">
 			<Box variant="flex-col" padding="0.5rem">
 				<Input
 					label
@@ -64,8 +64,8 @@ const options2 = [
 ];
 DiscoverBar.args = {
 	children: (
-		<Card withBorders margin="0">
-			<Box variant="flex-space-between" padding="0.5rem">
+		<Card withBorders shadow="light">
+			<Box variant="shelf">
 				<Button variant="filter" label="All" />
 				<Input
 					variant="search"
@@ -85,7 +85,7 @@ DiscoverBar.args = {
 export const BookUpload = Template.bind({});
 BookUpload.args = {
 	children: (
-		<Card withBorders margin="0">
+		<Card withBorders shadow="light">
 			<Box variant="flex-col" padding="0.5rem">
 				<Input
 					label

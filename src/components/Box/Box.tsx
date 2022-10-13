@@ -8,7 +8,8 @@ export type BoxVariant =
 	| 'flex-col-start'
 	| 'flex-space-between'
 	| 'flex-align-start'
-	| 'flex-align-end';
+	| 'flex-align-end'
+	| 'shelf';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 	variant?: BoxVariant;
@@ -39,6 +40,8 @@ const getDisplayType = (type: BoxVariant) => {
 			return bx.FlexAlignStart;
 		case 'flex-align-end':
 			return bx.FlexAlignEnd;
+		case 'shelf':
+			return bx.ShelfFlex;
 		default:
 			return bx.FlexBox;
 	}

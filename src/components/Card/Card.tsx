@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as cs from './Card.style';
 
+export type CardShdowType = 'none' | 'light' | 'bright';
+
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	withBorders?: boolean;
 	center?: boolean;
@@ -8,11 +10,18 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	width?: string;
 	height?: string;
 	margin?: string;
+	shadow?: CardShdowType;
 	backgroundColor?: string;
 }
 
-function activateBorder(style: boolean) {
-	return style ? cs.CardWBorders : cs.DefaultCard;
+function activateBorderAndShadow(border: boolean, shadow: CardShdowType) {
+	return border
+		? shadow === 'none'
+			? cs.CardWBorders
+			: shadow === 'bright'
+			? cs.CardWithBorderAndBrightShadow
+			: cs.CardWithBorderAndLightShadow
+		: cs.DefaultCard;
 }
 
 export const Card: React.FC<CardProps> = React.forwardRef<
@@ -23,6 +32,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 		{
 			withBorders = false,
 			center = false,
+			shadow = 'none',
 			children,
 			width,
 			height,
@@ -32,7 +42,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 		},
 		ref
 	): JSX.Element => {
-		const Element = activateBorder(withBorders);
+		const Element = activateBorderAndShadow(withBorders, shadow);
 		return (
 			<Element
 				ref={ref}

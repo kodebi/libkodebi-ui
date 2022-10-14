@@ -127,6 +127,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 						style={{ width, margin, borderColor }}
 						value={value}
 						placeholder={placeholder}
+						onChange={onChange}
 						{...props}
 					/>
 				)}

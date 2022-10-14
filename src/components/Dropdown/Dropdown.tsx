@@ -91,7 +91,7 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 					id={id}
 					style={{ width, padding, margin }}
 					data-testid="select-test"
-					value={value}
+					defaultValue={value}
 					onChange={onChange}
 					{...props}
 				>

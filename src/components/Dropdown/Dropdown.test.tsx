@@ -53,12 +53,12 @@ describe('Dropdown', () => {
 				variant="default"
 				id="some-id"
 				name="some-name"
-				value="test1"
+				value={options[0].value}
 				options={options}
 			/>
 		);
 		const dropdownElem = screen.getByTestId(/select-test/i);
-		fireEvent.change(dropdownElem, { target: { value: 'test2' } });
+		fireEvent.change(dropdownElem, { target: { value: options[1].value } });
 		expect(dropdownElem).toHaveDisplayValue(/test2/i);
 	});
 

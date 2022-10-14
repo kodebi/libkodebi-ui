@@ -53,7 +53,7 @@ describe('Dropdown', () => {
 				variant="default"
 				id="some-id"
 				name="some-name"
-				value={options[0].value}
+				defaultValue={options[0].value}
 				options={options}
 			/>
 		);

@@ -8,7 +8,7 @@ describe('Card', () => {
 		const cardElem = screen.getByText(/test card/i);
 		expect(cardElem).toBeInTheDocument();
 		expect(cardElem).toHaveStyle({
-			width: 'auto',
+			width: '100%',
 		});
 	});
 

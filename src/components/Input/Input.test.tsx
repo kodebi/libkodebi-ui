@@ -89,4 +89,22 @@ describe('Input', () => {
 		const wrapElem = screen.getByPlaceholderText(/testing/i);
 		expect(wrapElem).toBeInTheDocument();
 	});
+
+	it('renders Textarea correctly and changes input value', () => {
+		render(
+			<Input
+				label
+				textarea
+				position="left"
+				labelTag="Test"
+				id="testinput"
+				name="testinput"
+				variant="primary"
+				placeholder="testing textarea"
+			/>
+		);
+		const textArea = screen.getByPlaceholderText(/testing textarea/i);
+		fireEvent.change(textArea, { target: { value: 'test' } });
+		expect(textArea).toHaveDisplayValue(/test/i);
+	});
 });

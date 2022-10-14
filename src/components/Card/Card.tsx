@@ -8,6 +8,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	center?: boolean;
 	children?: React.ReactNode;
 	width?: string;
+	maxWidth?: string;
 	height?: string;
 	margin?: string;
 	shadow?: CardShdowType;
@@ -35,6 +36,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 			shadow = 'none',
 			children,
 			width,
+			maxWidth,
 			height,
 			margin,
 			backgroundColor,
@@ -50,6 +52,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 					width,
 					height,
 					margin,
+					maxWidth,
 					justifyContent: `${center && 'center'}`,
 					alignItems: `${center && 'center'}`,
 					backgroundColor,

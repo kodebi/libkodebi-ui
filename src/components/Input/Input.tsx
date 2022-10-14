@@ -32,7 +32,6 @@ export interface InputProps
 	position?: LabelPosition;
 	rows?: number;
 	cols?: number;
-	textLength?: number;
 	wrap?: string;
 	required?: boolean;
 	borderColor?: string;
@@ -85,7 +84,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 			rows,
 			cols,
 			borderColor,
-			textLength,
+			onChange,
 			...props
 		}: InputProps,
 		ref
@@ -108,25 +107,26 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 				)}
 				{textarea ? (
 					<TextareaElement
+						id={id}
+						name={name}
 						placeholder={placeholder}
 						wrap={wrap}
 						rows={rows}
 						cols={cols}
-						name={name}
 						style={{ width, margin, borderColor }}
 						value={value}
-						defaultValue={value}
 						data-testid="textarea-test"
+						onChange={onChange}
 					/>
 				) : (
 					<InputElement
 						ref={ref}
 						data-testid="input-test"
-						name={name}
 						type={type}
+						name={name}
 						style={{ width, margin, borderColor }}
-						placeholder={placeholder}
 						value={value}
+						placeholder={placeholder}
 						{...props}
 					/>
 				)}

@@ -71,7 +71,6 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 		ref
 	): JSX.Element => {
 		const Label = L.StyledLabel;
-		const Option = D.ListOption;
 		const Wrapper = determineLabelPos(label, position);
 		const Element = getDropdownType(variant);
 		return (
@@ -91,6 +90,7 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 					id={id}
 					style={{ width, padding, margin }}
 					data-testid="select-test"
+					defaultValue={value}
 					onChange={onChange}
 					{...props}
 				>
@@ -103,9 +103,9 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 							acceptedValues = option;
 						}
 						return (
-							<Option key={index} value={acceptedValues} {...option}>
+							<option key={index} value={acceptedValues} {...option}>
 								{acceptedValues}
-							</Option>
+							</option>
 						);
 					})}
 				</Element>

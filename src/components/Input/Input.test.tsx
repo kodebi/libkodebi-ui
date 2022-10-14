@@ -76,9 +76,11 @@ describe('Input', () => {
 	it('renders InputWrapper correctly', () => {
 		render(
 			<Input
+				label
 				position="left"
+				labelTag="Test"
 				id="testinput"
-				name="Test"
+				name="testinput"
 				variant="primary"
 				type="text"
 				placeholder="testing"

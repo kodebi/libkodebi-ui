@@ -27,6 +27,7 @@ export interface InputProps
 	value?: string;
 	marginRight?: string;
 	label?: boolean;
+	labelTag?: string;
 	labelColor?: string;
 	position?: LabelPosition;
 	rows?: number;
@@ -77,6 +78,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 			labelColor,
 			id,
 			name,
+			labelTag,
 			value,
 			placeholder,
 			wrap,
@@ -97,31 +99,34 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 				{label && (
 					<Label
 						id={id}
-						htmlFor={name}
+						htmlFor={labelTag}
 						style={{ marginRight, color: `${labelColor}` }}
 						data-testid="label-test"
 					>
-						{`${name}: `}
+						{`${labelTag}: `}
 					</Label>
 				)}
 				{textarea ? (
 					<TextareaElement
 						id={id}
-						name={name}
 						placeholder={placeholder}
 						wrap={wrap}
 						rows={rows}
 						cols={cols}
+						name={name}
 						style={{ width, margin, borderColor }}
+						value={value}
 						data-testid="textarea-test"
 					/>
 				) : (
 					<InputElement
 						ref={ref}
 						data-testid="input-test"
+						name={name}
 						type={type}
 						style={{ width, margin, borderColor }}
 						placeholder={placeholder}
+						value={value}
 						{...props}
 					/>
 				)}
@@ -143,5 +148,6 @@ Input.defaultProps = {
 	width: undefined,
 	margin: undefined,
 	onChange: undefined,
+	onKeyPress: undefined,
 	required: false,
 };

@@ -30,6 +30,7 @@ export interface DropdownProps
 	label?: boolean;
 	labelColor?: string;
 	position?: LabelPosition;
+	labelTag?: string;
 	onChange?: () => void;
 }
 
@@ -63,6 +64,7 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 			marginRight,
 			labelColor,
 			options,
+			labelTag,
 			...props
 		}: DropdownProps,
 		ref
@@ -76,17 +78,16 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 				{label && (
 					<Label
 						id={id}
-						htmlFor={name}
+						htmlFor={labelTag}
 						style={{ marginRight, color: `${labelColor}` }}
 						data-testid="label-testid"
 					>
-						{`${name}: `}
+						{`${labelTag}: `}
 					</Label>
 				)}
 				<Element
 					ref={ref}
 					id={id}
-					defaultValue={value}
 					style={{ width, padding, margin }}
 					data-testid="select-test"
 					{...props}

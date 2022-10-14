@@ -13,7 +13,8 @@ const Template: ComponentStory<typeof Dropdown> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	name: 'Dropdown',
+	name: 'dropdown',
+	labelTag: 'Dropdown',
 	variant: 'default',
 	width: '50%',
 	options: ['Test', 'Hello'],
@@ -22,7 +23,7 @@ Default.args = {
 
 export const Filter = Template.bind({});
 Filter.args = {
-	name: 'Filter',
+	name: 'filter',
 	variant: 'filter',
 	options: [
 		{ id: 1, value: 'Ketchup' },

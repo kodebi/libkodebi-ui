@@ -70,7 +70,8 @@ describe('Dropdown', () => {
 				options={options}
 				value="test2"
 				id="label-id"
-				name="Test"
+				name="test2"
+				labelTag="Noch ein Test"
 			/>
 		);
 		const wrappingElem = screen.getByTestId(/label-testid/i);

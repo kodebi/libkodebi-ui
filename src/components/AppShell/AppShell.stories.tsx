@@ -20,7 +20,8 @@ LoginForm.args = {
 				<Input
 					label
 					id="email"
-					name="Email"
+					name="email"
+					labelTag="Deine Email"
 					type="email"
 					variant="primary"
 					position="above"
@@ -31,6 +32,7 @@ LoginForm.args = {
 					id="password"
 					name="Passwort"
 					type="password"
+					labelTag="Dein Password"
 					variant="primary"
 					position="above"
 					placeholder="Passwort eingeben"
@@ -69,7 +71,7 @@ DiscoverBar.args = {
 				<Button variant="filter" label="All" />
 				<Input
 					variant="search"
-					name="Suche"
+					name="search"
 					id="search"
 					type="search"
 					margin="0.5rem"
@@ -90,7 +92,8 @@ BookUpload.args = {
 				<Input
 					label
 					id="title"
-					name="Titel"
+					labelTag="Titel"
+					name="title"
 					type="text"
 					position="above"
 					placeholder="Titel eingeben"

@@ -31,8 +31,9 @@ Search.args = {
 export const LeftLabelInput = Template.bind({});
 LeftLabelInput.args = {
 	id: 'testid',
-	name: 'Test',
+	name: 'test',
 	type: 'text',
+	labelTag: 'Links',
 	variant: 'primary',
 	position: 'left',
 	textarea: false,
@@ -42,7 +43,8 @@ LeftLabelInput.args = {
 export const AboveLabelInput = Template.bind({});
 AboveLabelInput.args = {
 	id: 'testid',
-	name: 'Test',
+	name: 'test',
+	labelTag: 'Oben',
 	type: 'text',
 	variant: 'primary',
 	position: 'above',
@@ -54,7 +56,8 @@ AboveLabelInput.args = {
 export const TextareaTest = Template.bind({});
 TextareaTest.args = {
 	id: 'testid',
-	name: 'Test',
+	name: 'test',
+	labelTag: 'Textfeld',
 	type: 'text',
 	variant: 'primary',
 	position: 'above',

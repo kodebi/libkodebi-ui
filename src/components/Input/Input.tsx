@@ -108,7 +108,6 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 				)}
 				{textarea ? (
 					<TextareaElement
-						id={id}
 						placeholder={placeholder}
 						wrap={wrap}
 						rows={rows}
@@ -116,6 +115,7 @@ export const Input: React.FC<InputProps> = React.forwardRef<
 						name={name}
 						style={{ width, margin, borderColor }}
 						value={value}
+						defaultValue={value}
 						data-testid="textarea-test"
 					/>
 				) : (

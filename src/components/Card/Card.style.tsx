@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { FlexCol } from '../Box/Box.style';
 
 export const DefaultCard = styled(FlexCol)`
-	width: auto;
+	width: 100%;
 	height: auto;
 	padding: 0.75rem;
 	margin: 0 0.5rem;

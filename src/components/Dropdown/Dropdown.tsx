@@ -67,7 +67,6 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 			labelColor,
 			options,
 			labelTag,
-			onChange,
 			...props
 		}: DropdownProps,
 		ref
@@ -91,10 +90,10 @@ export const Dropdown: React.FC<DropdownProps> = React.forwardRef<
 				<Element
 					ref={ref}
 					id={id}
+					name={name}
 					style={{ width, padding, margin }}
 					data-testid="select-test"
-					value={value}
-					onChange={onChange}
+					defaultValue={value}
 					{...props}
 				>
 					{options?.map((option: OptionProps, index: number) => {

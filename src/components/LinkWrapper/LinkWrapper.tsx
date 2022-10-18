@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { NavLinkProps } from 'react-router-dom';
 import * as L from './LinkWrapper.style';
 
 export type LinkType = 'default' | 'menu' | 'footer';
 
-export interface LinkWrapperProps extends NavLinkProps {
-	to: string;
+export interface LinkWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: React.ReactNode;
 	type?: LinkType;
 }
@@ -24,31 +22,24 @@ function getLinkType(type: LinkType) {
 }
 
 export const LinkWrapper: React.FC<LinkWrapperProps> = React.forwardRef<
-	HTMLAnchorElement,
+	HTMLDivElement,
 	LinkWrapperProps
 >(
 	(
-		{ type = 'default', to, children, ...props }: LinkWrapperProps,
+		{ type = 'default', children, ...props }: LinkWrapperProps,
 		ref
 	): JSX.Element => {
 		const LinkElement = getLinkType(type);
 		return (
-			<LinkElement
-				ref={ref}
-				type="default"
-				to={to}
-				data-testid="link-test"
-				{...props}
-			>
+			<LinkElement ref={ref} data-testid="link-test" {...props}>
 				{children}
 			</LinkElement>
 		);
 	}
 );
 
-LinkWrapper.displayName = 'Link';
+LinkWrapper.displayName = 'LinkWrapper';
 LinkWrapper.defaultProps = {
 	type: 'default',
-	to: undefined,
 	children: undefined,
 };

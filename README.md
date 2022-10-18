@@ -8,7 +8,7 @@
 <h1 align="center">Kodebi UI Component Library</h1>
 
   <p align="center">
-    The 1.1.5 version of the UI components for the Kodebi Web App and Website.
+    The 1.1.6 version of the UI components for the Kodebi Web App and Website.
   </p>
 
 <!-- BADGES -->
@@ -164,9 +164,10 @@ Components from the library come with a default styling, but are also customizab
 
 #### AppShell
 
-| Prop     | Type        | Optional? | Description                                                        |
-| -------- | ----------- | --------- | ------------------------------------------------------------------ |
-| children | `ReactNode` | no        | wraps other components with the shell to inherit the Kodebi styles |
+| Prop         | Type        | Optional? | Description                                                        |
+| ------------ | ----------- | --------- | ------------------------------------------------------------------ |
+| children     | `ReactNode` | no        | wraps other components with the shell to inherit the Kodebi styles |
+| defaultStyle | `boolean`   | yes       | applies default kodebi styles                                      |
 
 #### Box
 
@@ -194,6 +195,9 @@ Components from the library come with a default styling, but are also customizab
 | flex-space-between | `string` |
 | flex-align-start   | `string` |
 | flex-align-end     | `string` |
+| flexible-flex      | `string` |
+| shelf              | `string` |
+| grid-center        | `string` |
 
 #### Button
 
@@ -226,14 +230,16 @@ Components from the library come with a default styling, but are also customizab
 
 #### Card
 
-| Prop        | Type             | Optional? | Description                                                  |
-| ----------- | ---------------- | --------- | ------------------------------------------------------------ |
-| withBorders | `boolean`        | yes       | sets a border for the Card component                         |
-| shadow      | `CardShadowType` | yes       | defines the shadow of the border if border is passed as true |
-| center      | `boolean`        | yes       | centers content within the Card                              |
-| width       | `string`         | yes       | customizes the width of the Card                             |
-| height      | `string`         | yes       | sets a custom height for the Card                            |
-| children    | `ReactNode`      | yes       | passes children objects to the Card component                |
+| Prop            | Type             | Optional? | Description                                                  |
+| --------------- | ---------------- | --------- | ------------------------------------------------------------ |
+| withBorders     | `boolean`        | yes       | sets a border for the Card component                         |
+| shadow          | `CardShadowType` | yes       | defines the shadow of the border if border is passed as true |
+| center          | `boolean`        | yes       | centers content within the Card                              |
+| width           | `string`         | yes       | customizes the width of the Card                             |
+| height          | `string`         | yes       | sets a custom height for the Card                            |
+| backgroundColor | `string`         | yes       | sets a custom backgroundColor for the Card                   |
+| borderColor     | `string`         | yes       | sets a custom borderColor for the Card                       |
+| children        | `ReactNode`      | yes       | passes children objects to the Card component                |
 
 ##### CardShadowType
 
@@ -245,10 +251,11 @@ Components from the library come with a default styling, but are also customizab
 
 #### Footer
 
-| Prop  | Type                     | Optional? | Description                            |
-| ----- | ------------------------ | --------- | -------------------------------------- |
-| links | `Array` of `LinkWrapper` | yes       | passes an array of links to the footer |
-| icons | `Array` of `IconWrapper` | yes       | passes an arry of icons to the footer  |
+| Prop    | Type                     | Optional? | Description                                |
+| ------- | ------------------------ | --------- | ------------------------------------------ |
+| element | `ReactElement<any>`      | no        | pass a Link component for internal routing |
+| links   | `Array` of `any`         | yes       | passes an array of links to the footer     |
+| icons   | `Array` of `IconWrapper` | yes       | passes an arry of icons to the footer      |
 
 #### Input
 
@@ -305,7 +312,6 @@ Components from the library come with a default styling, but are also customizab
 
 | Prop     | Type        | Optional? | Description                                          |
 | -------- | ----------- | --------- | ---------------------------------------------------- |
-| to       | `string`    | no        | passes the path to link to respective route          |
 | type     | `LinkType`  | yes       | accepts `default`, `menu` and `footer` for styling   |
 | children | `ReactNode` | yes       | passes children objects to the LinkWrapper component |
 

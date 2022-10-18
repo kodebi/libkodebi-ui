@@ -2,7 +2,7 @@ import React from 'react';
 import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Footer } from './Footer';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 export default {
 	title: 'libkodebi-ui/Footer',
@@ -28,4 +28,5 @@ const testIcons = [
 Testfootie.args = {
 	links: links,
 	icons: testIcons,
+	linkElement: Link,
 };

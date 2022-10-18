@@ -67,7 +67,7 @@ const options2 = [
 DiscoverBar.args = {
 	children: (
 		<Card withBorders shadow="light">
-			<Box variant="shelf">
+			<Box variant="flexible-flex">
 				<Button variant="filter" label="All" />
 				<Input
 					variant="search"
@@ -98,7 +98,14 @@ BookUpload.args = {
 					position="above"
 					placeholder="Titel eingeben"
 				/>
-				<Dropdown label position="above" name="Genre" options={options1} />
+				<Dropdown
+					label
+					position="above"
+					labelTag="Genre"
+					id="category"
+					name="category"
+					options={options1}
+				/>
 			</Box>
 		</Card>
 	),

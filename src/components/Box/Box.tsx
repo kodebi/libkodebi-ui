@@ -9,11 +9,14 @@ export type BoxVariant =
 	| 'flex-space-between'
 	| 'flex-align-start'
 	| 'flex-align-end'
-	| 'shelf';
+	| 'flexible-flex'
+	| 'shelf'
+	| 'grid-center';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 	variant?: BoxVariant;
 	children?: React.ReactNode;
+	id?: string;
 	width?: string;
 	height?: string;
 	className?: string;
@@ -40,8 +43,12 @@ const getDisplayType = (type: BoxVariant) => {
 			return bx.FlexAlignStart;
 		case 'flex-align-end':
 			return bx.FlexAlignEnd;
+		case 'flexible-flex':
+			return bx.FlexibleFlex;
 		case 'shelf':
-			return bx.ShelfFlex;
+			return bx.Shelf;
+		case 'grid-center':
+			return bx.GridCenter;
 		default:
 			return bx.FlexBox;
 	}
@@ -61,6 +68,9 @@ export const Box: React.FC<BoxProps> = React.forwardRef<
 			padding,
 			margin,
 			maxWidth,
+			id,
+			className,
+			position,
 			...props
 		},
 		ref

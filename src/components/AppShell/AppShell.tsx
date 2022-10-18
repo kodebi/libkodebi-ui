@@ -3,16 +3,18 @@ import { KodebiStyles } from './KodebiStyles';
 
 export interface AppShellProps {
 	children: React.ReactNode;
+	defaultStyle?: boolean;
 }
 
 export const AppShell: React.FC<AppShellProps> = ({
+	defaultStyle = false,
 	children,
 }: AppShellProps): React.ReactElement => {
 	return (
-		<>
-			<KodebiStyles />
+		<React.Fragment>
+			{defaultStyle && <KodebiStyles />}
 			{children}
-		</>
+		</React.Fragment>
 	);
 };
 

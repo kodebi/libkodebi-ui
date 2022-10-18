@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
 
-export const WrappedLink = styled(NavLink)`
+export const WrappedLink = styled('div')`
 	display: inline-block;
 	transition: all 0.2s ease-in-out;
 	color: #d96c75;

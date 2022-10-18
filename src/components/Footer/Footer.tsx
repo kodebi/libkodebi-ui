@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { Box } from '../Box';
 import { Text } from '../Text';
-import { LinkWrapper, LinkWrapperProps } from '../LinkWrapper';
+import { LinkWrapper } from '../LinkWrapper';
 import { IconWrapper, IconProps } from '../IconWrapper';
 import { KodebiFooter } from './Footer.style';
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
-	links?: Array<LinkWrapperProps>;
+	element: React.ElementType;
+	links?: Array<any>;
 	icons?: Array<IconProps>;
 	maxWidth?: string;
 }
@@ -15,6 +16,7 @@ export const Footer: React.FC<FooterProps> = ({
 	links,
 	icons,
 	maxWidth,
+	element: LinkElement,
 }): JSX.Element => {
 	return (
 		<KodebiFooter>
@@ -36,11 +38,11 @@ export const Footer: React.FC<FooterProps> = ({
 							padding="0"
 							margin="0.5rem 0 0 0"
 						>
-							{links?.map((link: LinkWrapperProps, index) => {
+							{links?.map((link: any, index) => {
 								return (
-									<LinkWrapper type="footer" to={link.to} key={index}>
-										{link.children}
-									</LinkWrapper>
+									<LinkElement to={link.to} key={index}>
+										<LinkWrapper type="footer">{link.children}</LinkWrapper>
+									</LinkElement>
 								);
 							})}
 						</Box>

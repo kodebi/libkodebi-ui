@@ -13,6 +13,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	margin?: string;
 	shadow?: CardShdowType;
 	backgroundColor?: string;
+	borderColor?: string;
 }
 
 function activateBorderAndShadow(border: boolean, shadow: CardShdowType) {
@@ -40,6 +41,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 			height,
 			margin,
 			backgroundColor,
+			borderColor,
 			...props
 		},
 		ref
@@ -56,6 +58,7 @@ export const Card: React.FC<CardProps> = React.forwardRef<
 					justifyContent: `${center && 'center'}`,
 					alignItems: `${center && 'center'}`,
 					backgroundColor,
+					borderColor,
 				}}
 				{...props}
 			>
@@ -69,6 +72,7 @@ Card.displayName = 'Card';
 Card.defaultProps = {
 	withBorders: false,
 	center: false,
+	shadow: 'none',
 	width: undefined,
 	height: undefined,
 };

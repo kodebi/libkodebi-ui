@@ -13,6 +13,7 @@ export interface ButtonProps
 	className?: string;
 	type?: ButtonType;
 	children?: React.ReactNode;
+	animation?: string;
 	onClick?: () => void;
 }
 
@@ -40,6 +41,8 @@ export const Button: React.FC<ButtonProps> = React.forwardRef<
 			label,
 			width,
 			margin,
+			animation,
+			className,
 			children,
 			...props
 		},
@@ -47,7 +50,12 @@ export const Button: React.FC<ButtonProps> = React.forwardRef<
 	): JSX.Element => {
 		const Element = checkBtnType(variant);
 		return (
-			<Element ref={ref} style={{ width, margin }} {...props}>
+			<Element
+				ref={ref}
+				style={{ width, margin, animation }}
+				className={className}
+				{...props}
+			>
 				{label || children}
 			</Element>
 		);

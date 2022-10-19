@@ -45,11 +45,12 @@ export const FlexAlignEnd = styled(FlexBox)`
 
 export const FlexibleFlex = styled('section')`
 	display: flex;
-	flex-flow: column nowrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
 	align-items: center;
 
 	@media (min-width: 800px) {
-		flex-flow: row wrap;
+		flex-direction: row;
 		justify-content: space-around;
 	}
 `;
@@ -59,9 +60,10 @@ export const Shelf = styled(FlexibleFlex)`
 	gap: 1rem;
 
 	@media (min-width: 800px) {
-		gap: 1.5rem;
 		padding: 1.25rem;
+		flex-wrap: wrap;
 		justify-content: flex-start;
+		gap: 1.5rem;
 	}
 `;
 

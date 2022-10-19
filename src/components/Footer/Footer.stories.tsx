@@ -28,5 +28,5 @@ const testIcons = [
 Testfootie.args = {
 	links: links,
 	icons: testIcons,
-	linkElement: Link,
+	element: Link,
 };

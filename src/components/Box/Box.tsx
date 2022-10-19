@@ -79,7 +79,9 @@ export const Box: React.FC<BoxProps> = React.forwardRef<
 		return (
 			<Element
 				ref={ref}
+				id={id}
 				style={{ width, height, padding, margin, backgroundColor, maxWidth }}
+				className={className}
 				{...props}
 			>
 				{children}

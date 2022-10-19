@@ -1,6 +1,6 @@
 {
 	"name": "@kodebi/libkodebi-ui",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"description": "The library for reusable UI components in Kodebi apps",
 	"repository": "https://github.com/kodebi/libkodebi-ui.git",
 	"author": "Chris Schimetschka <chris.schimetschka@gmail.com>",

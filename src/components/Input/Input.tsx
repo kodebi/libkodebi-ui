@@ -35,7 +35,7 @@ export interface InputProps
 	wrap?: string;
 	required?: boolean;
 	borderColor?: string;
-	onChange?: () => void;
+	onChange?: (e?: any) => void;
 	onKeyPress?: () => void;
 }
 

@@ -14,7 +14,7 @@ export interface ButtonProps
 	type?: ButtonType;
 	children?: React.ReactNode;
 	animation?: string;
-	onClick?: () => void;
+	onClick?: (e?: any) => void;
 }
 
 function checkBtnType(type: ButtonStyle) {

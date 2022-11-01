@@ -32,7 +32,7 @@ export interface DropdownProps
 	labelColor?: string;
 	position?: LabelPosition;
 	labelTag?: string;
-	onChange?: () => void;
+	onChange?: (e?: any) => void;
 }
 
 const getDropdownType = (type: DropdownType) => {
